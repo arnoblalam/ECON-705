@@ -1,0 +1,115 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4205,        105]
+NotebookOptionsPosition[      3964,         92]
+NotebookOutlinePosition[      4307,        107]
+CellTagsIndexPosition[      4264,        104]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", 
+  RowBox[{
+  "xs", ",", " ", "mask", ",", " ", "filteredSet", ",", " ", "isubset", ",", 
+   " ", "selector"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"selector", "[", 
+   RowBox[{"_", ",", " ", 
+    RowBox[{"{", "}"}], ",", " ", "filteredSet_"}], "]"}], " ", ":=", " ", 
+  "filteredSet"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"selector", "[", 
+   RowBox[{"xs_", ",", " ", "mask_", ",", " ", "filteredSet_"}], "]"}], ":=", 
+  " ", "\[IndentingNewLine]", 
+  RowBox[{"If", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"First", "[", "mask", "]"}], "==", " ", "1"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"selector", "[", 
+     RowBox[{
+      RowBox[{"Rest", "[", "xs", "]"}], ",", " ", 
+      RowBox[{"Rest", "[", "mask", "]"}], ",", " ", 
+      RowBox[{"Append", "[", 
+       RowBox[{"existingSet", ",", " ", 
+        RowBox[{"First", "[", "xs", "]"}]}], "]"}]}], "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"selector", "[", 
+     RowBox[{
+      RowBox[{"Rest", "[", "xs", "]"}], ",", " ", 
+      RowBox[{"Rest", "[", "mask", "]"}], ",", " ", "existingSet"}], "]"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"isubset", "[", 
+   RowBox[{"xs_", ",", " ", "dec_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"If", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dec", " ", "\[GreaterEqual]", " ", 
+     RowBox[{
+      RowBox[{"Power", "[", 
+       RowBox[{"2", ",", " ", 
+        RowBox[{"Length", "[", "xs", "]"}]}], "]"}], " ", "-", " ", "1"}]}], 
+    ",", "\[IndentingNewLine]", "xs", ",", "\[IndentingNewLine]", 
+    RowBox[{"selector", "[", 
+     RowBox[{"xs", ",", " ", 
+      RowBox[{"PadLeft", "[", 
+       RowBox[{
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"dec", ",", " ", "2"}], "]"}], ",", " ", 
+        RowBox[{"Length", "[", "xs", "]"}]}], "]"}], ",", " ", 
+      RowBox[{"{", "}"}]}], "]"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.650994494505404*^9, 3.650994499159436*^9}, {
+   3.6509945993089676`*^9, 3.6509946090188503`*^9}, {3.6509946677495747`*^9, 
+   3.650994787447851*^9}, 3.650995050642454*^9, {3.6509953885672274`*^9, 
+   3.6509953963167315`*^9}, {3.6509954693664503`*^9, 3.650995470237097*^9}, {
+   3.650996043803775*^9, 3.6509963900608025`*^9}, {3.650996574597047*^9, 
+   3.650996633755614*^9}, {3.6509966653556457`*^9, 3.65099676618396*^9}, {
+   3.650996799906352*^9, 3.650996809289019*^9}, {3.6509968888394356`*^9, 
+   3.6509970326765246`*^9}, {3.6509970674675317`*^9, 3.650997102016694*^9}, {
+   3.6509971420761614`*^9, 3.650997155966031*^9}, {3.6509971921947784`*^9, 
+   3.650997441319618*^9}, {3.6509980644084544`*^9, 3.6509981972943444`*^9}, {
+   3.650998240816955*^9, 3.6509982499173927`*^9}, {3.650998479764658*^9, 
+   3.650998495381955*^9}, {3.650998534838521*^9, 3.650998554379436*^9}, {
+   3.650998586127981*^9, 3.650998696408187*^9}, {3.650998825566764*^9, 
+   3.6509989698421326`*^9}, {3.6509990616727495`*^9, 3.650999114840197*^9}, {
+   3.6509991468893776`*^9, 3.650999208010542*^9}, {3.650999247350918*^9, 
+   3.6509992818905363`*^9}, {3.650999326313131*^9, 3.65099932768911*^9}, {
+   3.650999371911199*^9, 3.650999402317459*^9}, {3.6509994413485575`*^9, 
+   3.650999441429614*^9}, {3.65099954717307*^9, 3.650999550221243*^9}, {
+   3.6509995812795525`*^9, 3.6509995839203997`*^9}, {3.650999698059948*^9, 
+   3.651000066495555*^9}}]
+},
+WindowSize->{1440, 877},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3402, 70, 265, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
