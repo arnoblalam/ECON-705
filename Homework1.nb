@@ -1,0 +1,777 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17498,        768]
+NotebookOptionsPosition[     17255,        755]
+NotebookOutlinePosition[     17598,        770]
+CellTagsIndexPosition[     17555,        767]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ StyleBox["Homework 1\n", "Section"],
+ StyleBox["Excercise 1\n", "Subsection"],
+ "The ",
+ StyleBox["setbuilder", "Code"],
+ " function takes as its arguments a domain and a predicate (a function that \
+either evaluates to true or false for elements in the domain).  We then \
+create a set ",
+ StyleBox["s", "Code"],
+ " and assign the empty set ",
+ StyleBox["\[EmptySet]", "Code"],
+ " to it.  We then go through each element of the domain (temporarily binding \
+it to ",
+ StyleBox["\[Omega]", "Code"],
+ "), and testing whether ",
+ StyleBox["predicate(\[Omega])", "Code"],
+ " evaluates to true. If it does, we add it to the set ",
+ StyleBox["s", "Code"],
+ ". We return the set ",
+ StyleBox["s", "Code"],
+ ".\nPython has something similar to setbuilder.  It is called a list \
+comprehension (or set comprehension).  For example, the following code will \
+create the set ",
+ StyleBox["G", "Code"],
+ " of the squares of the first 10 natural numbers.\n```python\n",
+ StyleBox["G = {x**2 for x in range(10) if x % 2 == 0}\n", "Code"],
+ "The general notation is:",
+ StyleBox["\n", "Code"],
+ "```\n",
+ StyleBox["my_set = {f(x) for x in domain if predicate}\n", "Code"],
+ StyleBox["Exercise 2", "Subsection"],
+ StyleBox["\n", "Section"],
+ "A = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"1", "2"},
+      {"3", "4"}
+     }], "]"}], TraditionalForm]]],
+ " , B = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"4", "3"},
+      {"2", "1"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "1"], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"5"},
+      {"6"}
+     }], "]"}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "2"], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"6"},
+      {"5"}
+     }], "]"}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "3"], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"1"},
+      {"2"}
+     }], "]"}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["Ax", "2"], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"1", "2"},
+      {"3", "4"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"6"},
+      {"5"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       RowBox[{
+        RowBox[{"1", "\[Times]", "6"}], "+", 
+        RowBox[{
+         RowBox[{"\[ImplicitPlus]", "2"}], "\[Times]", "5"}]}]},
+      {
+       RowBox[{
+        RowBox[{"3", "\[Times]", "6"}], "+", 
+        RowBox[{"4", "\[Times]", "5"}]}]}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       RowBox[{"6", "+", "10"}]},
+      {
+       RowBox[{"18", "+", "20"}]}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"16"},
+      {"38"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["Ax", "3"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"1", "2"},
+      {"3", "4"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"1"},
+      {"2"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       RowBox[{
+        RowBox[{"1", "\[Times]", "1"}], "+", 
+        RowBox[{"2", "\[Times]", "2"}]}]},
+      {
+       RowBox[{
+        RowBox[{"3", "\[Times]", "1"}], "+", 
+        RowBox[{"4", "\[Times]", "2"}]}]}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       RowBox[{"1", "+", "4"}]},
+      {
+       RowBox[{"3", "+", "8"}]}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"5"},
+      {"11"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["Bx", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"4", "3"},
+      {"2", "1"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"5"},
+      {"6"}
+     }], "]"}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       RowBox[{
+        RowBox[{"4", "\[Times]", "5"}], "+", 
+        RowBox[{"3", "\[Times]", "6"}]}]},
+      {
+       RowBox[{
+        RowBox[{"2", "\[Times]", "5"}], "+", 
+        RowBox[{"1", "\[Times]", "6"}]}]}
+     }], "]"}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       RowBox[{"20", "+", "18"}]},
+      {
+       RowBox[{"10", "+", "6"}]}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"38"},
+      {"16"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["Bx", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"4", "3"},
+      {"2", "1"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"6"},
+      {"5"}
+     }], "]"}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       RowBox[{
+        RowBox[{"4", "\[Times]", "6"}], "+", 
+        RowBox[{"3", "\[Times]", "5"}]}]},
+      {
+       RowBox[{
+        RowBox[{"2", "\[Times]", "6"}], "+", 
+        RowBox[{"1", "\[Times]", "5"}]}]}
+     }], "]"}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       RowBox[{"24", "+", "15"}]},
+      {
+       RowBox[{"12", "+", "5"}]}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"39"},
+      {"17"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["Bx", "3"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"4", "3"},
+      {"2", "1"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"1"},
+      {"2"}
+     }], "]"}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       RowBox[{
+        RowBox[{"4", "\[Times]", "1"}], "+", 
+        RowBox[{"3", "\[Times]", "2"}]}]},
+      {
+       RowBox[{
+        RowBox[{"2", "\[Times]", "1"}], "+", 
+        RowBox[{"1", "\[Times]", "2"}]}]}
+     }], "]"}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       RowBox[{"4", "+", "6"}]},
+      {
+       RowBox[{"2", "+", "2"}]}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"10"},
+      {"4"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ StyleBox["Exercise 3\n", "Subsection"],
+ "A = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"1", "7"},
+      {"2", "3"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " , x = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       SubscriptBox["x", "1"]},
+      {
+       SubscriptBox["x", "2"]}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " , ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["b", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"15"},
+      {"8"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " , ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["b", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"8"},
+      {"5"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"Ax", "=", 
+    SubscriptBox["b", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " : ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"1", "7"},
+      {"2", "3"}
+     }], "]"}], TraditionalForm]]],
+ "  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       SubscriptBox["x", "1"]},
+      {
+       SubscriptBox["x", "2"]}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"15"},
+      {"8"}
+     }], "]"}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       RowBox[{
+        RowBox[{"1", 
+         SubscriptBox["x", "1"]}], "+", 
+        RowBox[{"7", 
+         SubscriptBox["x", "2"]}]}]},
+      {
+       RowBox[{
+        RowBox[{"2", 
+         SubscriptBox["x", "1"]}], "+", 
+        RowBox[{"3", 
+         SubscriptBox["x", "2"]}]}]}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"15"},
+      {"8"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Rule] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"7", 
+    SubscriptBox["x", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 15, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"2", 
+    SubscriptBox["x", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"3", 
+    SubscriptBox["x", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 8\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"Ax", "=", 
+    SubscriptBox["b", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " : ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"1", "7"},
+      {"2", "3"}
+     }], "]"}], TraditionalForm]]],
+ "  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       SubscriptBox["x", "1"]},
+      {
+       SubscriptBox["x", "2"]}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"8"},
+      {"5"}
+     }], "]"}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {
+       RowBox[{
+        RowBox[{"1", 
+         SubscriptBox["x", "1"]}], "+", 
+        RowBox[{"7", 
+         SubscriptBox["x", "2"]}]}]},
+      {
+       RowBox[{
+        RowBox[{"2", 
+         SubscriptBox["x", "1"]}], "+", 
+        RowBox[{"3", 
+         SubscriptBox["x", "2"]}]}]}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", GridBox[{
+      {"8"},
+      {"5"}
+     }], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Rule] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"7", 
+    SubscriptBox["x", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 8, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"2", 
+    SubscriptBox["x", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"3", 
+    SubscriptBox["x", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 5x\n",
+ StyleBox["Exercise 4\n", "Subsection"],
+ "y = f - br\nm = ky - h\[CenterDot](r+\[Pi])\n\ny - br = f\nky = m + h\
+\[CenterDot](r+\[Pi])\nky = m + hr + h\[Pi]\nky - hr = m + h\[Pi]\n\n1y - br \
+= f\nky - hr = m+h\[Pi]\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"1", 
+       RowBox[{"-", "b"}]},
+      {"k", 
+       RowBox[{"-", "h"}]}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"y"},
+      {"r"}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"f"},
+      {
+       RowBox[{"m", "+", "h\[Pi]"}]}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\nLet A = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"1", 
+       RowBox[{"-", "b"}]},
+      {"k", 
+       RowBox[{"-", "h"}]}
+     }], ")"}], TraditionalForm]]],
+ ", x =",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"y"},
+      {"r"}
+     }], ")"}], TraditionalForm]]],
+ ", c =  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"f"},
+      {
+       RowBox[{"m", "+", "h\[Pi]"}]}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["A", 
+    RowBox[{"-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox["=", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{"kb", "-", "h"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {
+       RowBox[{"-", "h"}], "b"},
+      {
+       RowBox[{"-", "k"}], "1"}
+     }], ")"}], TraditionalForm]]],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["A", 
+    RowBox[{"-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "Ax = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["A", 
+    RowBox[{"-", "1"}]], TraditionalForm]]],
+ "c\nIx = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["A", 
+    RowBox[{"-", "1"}]], TraditionalForm]]],
+ "c\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"y"},
+      {"r"}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{"kb", "-", "h"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {
+       RowBox[{"-", "h"}], "b"},
+      {
+       RowBox[{"-", "k"}], "1"}
+     }], ")"}], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"f"},
+      {
+       RowBox[{"m", "+", "h\[Pi]"}]}
+     }], ")"}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{"kb", "-", "h"}]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {
+       RowBox[{
+        RowBox[{"-", "hf"}], " ", "+", " ", "bm", " ", "+", "bh\[Pi]"}]},
+      {
+       RowBox[{
+        RowBox[{"-", "kf"}], " ", "+", " ", "m", "+", " ", "h\[Pi]"}]}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{"kb", "-", "h"}]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {
+       RowBox[{
+        RowBox[{"b", "(", 
+         RowBox[{"m", " ", "+", "h\[Pi]"}], ")"}], "-", "hf", " "}]},
+      {
+       RowBox[{"m", "+", " ", "h\[Pi]", "-", "kf"}]}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[GridBox[{
+     {
+      RowBox[{"y", " ", "=", " ", 
+       RowBox[{
+        FractionBox["1", 
+         RowBox[{"kb", "-", "h"}]], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"b", "(", 
+           RowBox[{"m", "+", "h\[Pi]"}], ")"}], "-", "hf"}], ")"}]}]}]},
+     {
+      RowBox[{"r", "=", 
+       RowBox[{
+        FractionBox["1", 
+         RowBox[{"kb", "-", "h"}]], 
+        RowBox[{"(", 
+         RowBox[{"m", "+", "h\[Pi]", "-", "kf"}], ")"}]}]}]}
+    }], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBWIQLcarUihu/NoxKbFuPYie85pxB4h225a8B0TvM087
+D6I/MS14CKLPvb39HETzSCZ/ANFpp/SZJIB01zxVFhAdUXxGAUR7rG7WAtF3
+kpcFg+gZ1yzjQfS8vhVbQPSJp4+3gmjmbqM9IPrH277bIDos3UZZFuSO0Mt+
+ILruRUQIiA6Sn5MPostYvhwD0SXy70+DaDv5GxdBNKtvxmUQrWoQeB1E8+TN
+VZAD0huOs2qD6KpXQUEguo1tSiSIfqd9OgFEN/9kTwXR3/4tTAPRn5a55IHo
+RIcbxSD6g+mUChB9d/GfZhD98ZFQP4iWUNBZAqJLQttXgug909fsB9EAEcKU
+qQ==
+  "]]
+},
+WindowSize->{759, 833},
+WindowMargins->{{Automatic, 457}, {-7, Automatic}},
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 16693, 733, 1228, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)
