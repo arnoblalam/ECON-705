@@ -1,0 +1,1111 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     28984,       1102]
+NotebookOptionsPosition[     28277,       1071]
+NotebookOutlinePosition[     28637,       1087]
+CellTagsIndexPosition[     28594,       1084]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Homework 3", "Title",
+ CellChangeTimes->{{3.651702785068284*^9, 3.651702787117741*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 1", "Section",
+ CellChangeTimes->{{3.65170279379753*^9, 3.6517028068077726`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Non-mathematica", "Subsection",
+ CellChangeTimes->{{3.651702821958598*^9, 3.6517028376913724`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "A"], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", 
+    SubscriptBox["c", "A"]}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "B"], TraditionalForm]]],
+ ")\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "B"], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"g", "(", 
+    SubscriptBox["c", "B"]}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "A"], TraditionalForm]]],
+ ")\n\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["dP", "A"], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["C", "A"]], TraditionalForm]]],
+ "\[DifferentialD]",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["C", "A"], TraditionalForm]]],
+ "+ ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["P", "B"]], TraditionalForm]]],
+ "\[DifferentialD]",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "B"], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["dP", "B"], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["C", "B"]], TraditionalForm]]],
+ "\[DifferentialD]",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["C", "B"], TraditionalForm]]],
+ "+ ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["P", "A"]], TraditionalForm]]],
+ "\[DifferentialD]",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "A"], TraditionalForm]]],
+ "\nwhere ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["h", "x"], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[PartialD]", "h"}], 
+    RowBox[{"\[PartialD]", "x"}]], TraditionalForm]]],
+ "\n\nWe can rewrite these as:\n\[DifferentialD] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "A"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["P", "B"]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[DifferentialD] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "B"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "  = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["C", "A"]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[DifferentialD] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["C", "A"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\[DifferentialD] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "B"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["P", "A"]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[DifferentialD] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "A"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["C", "B"]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[DifferentialD] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["C", "B"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\nOr in matrix form:\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"1", 
+       RowBox[{"-", 
+        SubscriptBox["f", 
+         SubscriptBox["P", "B"]]}]},
+      {
+       RowBox[{"-", 
+        SubscriptBox["g", 
+         SubscriptBox["P", "A"]]}], "1"}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {
+       RowBox[{"\[DifferentialD]", 
+        SubscriptBox["P", "A"]}]},
+      {
+       RowBox[{"\[DifferentialD]", 
+        SubscriptBox["P", "B"]}]}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {
+       RowBox[{
+        SubscriptBox["f", 
+         SubscriptBox["C", "A"]], " ", 
+        RowBox[{"\[DifferentialD]", 
+         SubscriptBox["C", "A"]}]}]},
+      {
+       RowBox[{
+        SubscriptBox["g", 
+         SubscriptBox["C", "B"]], " ", 
+        RowBox[{"\[DifferentialD]", 
+         SubscriptBox["C", "B"]}]}]}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\nIf we invert the matrix of coefficients we obtain\n\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "\[CapitalDelta]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"1", 
+       SubscriptBox["f", 
+        SubscriptBox["P", "B"]]},
+      {
+       SubscriptBox["g", 
+        SubscriptBox["P", "A"]], "1"}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", where \[CapitalDelta] = 1 - ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["f", 
+     SubscriptBox["P", "B"]], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["g", 
+     SubscriptBox["P", "A"]], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\nMultiplying by the inverse, we obtain\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {
+       RowBox[{"\[DifferentialD]", 
+        SubscriptBox["P", "A"]}]},
+      {
+       RowBox[{"\[DifferentialD]", 
+        SubscriptBox["P", "B"]}]}
+     }], ")"}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "\[CapitalDelta]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"1", 
+       SubscriptBox["f", 
+        SubscriptBox["P", "B"]]},
+      {
+       SubscriptBox["g", 
+        SubscriptBox["P", "A"]], "1"}
+     }], ")"}], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {
+       RowBox[{
+        SubscriptBox["f", 
+         SubscriptBox["C", "A"]], " ", 
+        RowBox[{"\[DifferentialD]", " ", 
+         SubscriptBox["C", "A"]}]}]},
+      {
+       RowBox[{
+        SubscriptBox["g", 
+         SubscriptBox["C", "B"]], " ", 
+        RowBox[{"\[DifferentialD]", 
+         SubscriptBox["C", "B"]}]}]}
+     }], ")"}], TraditionalForm]]],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {
+       RowBox[{"\[DifferentialD]", 
+        SubscriptBox["P", "A"]}]},
+      {
+       RowBox[{"\[DifferentialD]", 
+        SubscriptBox["P", "B"]}]}
+     }], ")"}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "\[CapitalDelta]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {
+       RowBox[{
+        RowBox[{
+         SubscriptBox["f", 
+          SubscriptBox["C", "A"]], " ", 
+         RowBox[{"\[DifferentialD]", 
+          SubscriptBox["C", "A"]}]}], " ", "+", " ", 
+        RowBox[{
+         SubscriptBox["f", 
+          SubscriptBox["P", "B"]], " ", 
+         SubscriptBox["g", 
+          SubscriptBox["C", "B"]], " ", 
+         RowBox[{"\[DifferentialD]", 
+          SubscriptBox["C", "B"]}]}]}]},
+      {
+       RowBox[{
+        RowBox[{
+         SubscriptBox["g", 
+          SubscriptBox["P", "A"]], " ", 
+         SubscriptBox["f", 
+          SubscriptBox["C", "A"]], 
+         RowBox[{"\[DifferentialD]", 
+          SubscriptBox["C", "A"]}]}], " ", "+", " ", 
+        RowBox[{
+         SubscriptBox["g", 
+          SubscriptBox["C", "B"]], " ", 
+         RowBox[{"\[DifferentialD]", 
+          SubscriptBox["C", "B"]}]}]}]}
+     }], ")"}], TraditionalForm]]],
+ "\n\nThe comparative statics are as follows (assuming, ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "B"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "A"]}]], TraditionalForm]]],
+ " = 0, ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "B"]}]], TraditionalForm]]],
+ " = 0):\n\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "A"]}]], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["C", "A"]], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["P", "B"]], TraditionalForm]]],
+ " (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["C", "B"]], TraditionalForm]]],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "B"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "A"]}]], TraditionalForm]]],
+ "+ ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["P", "A"]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "A"]}]], TraditionalForm]]],
+ ")\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "A"]}]], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["C", "A"]], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["P", "B"]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["P", "A"]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "A"]}]], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "A"]}]], TraditionalForm]]],
+ " -  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["P", "B"]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["P", "A"]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "A"]}]], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["C", "A"]], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    FractionBox[
+     RowBox[{"\[DifferentialD]", 
+      SubscriptBox["P", "A"]}], 
+     RowBox[{"\[DifferentialD]", 
+      SubscriptBox["C", "A"]}]], ")"}], TraditionalForm]]],
+ " (1 -  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["P", "B"]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["P", "A"]], TraditionalForm]]],
+ ") =  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["C", "A"]], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "A"]}]], TraditionalForm]],
+  FontWeight->"Bold"],
+ StyleBox["=  ",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SubscriptBox["f", 
+     SubscriptBox["C", "A"]], 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      RowBox[{
+       SubscriptBox["f", 
+        SubscriptBox["P", "B"]], " ", 
+       SubscriptBox["g", 
+        SubscriptBox["P", "A"]]}]}], ")"}]], TraditionalForm]],
+  FontWeight->"Bold"],
+ "\nSimilarly\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "B"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "B"]}]], TraditionalForm]],
+  FontWeight->"Bold"],
+ StyleBox["=  ",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SubscriptBox["f", 
+     SubscriptBox["C", "B"]], 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      RowBox[{
+       SubscriptBox["g", 
+        SubscriptBox["P", "B"]], " ", 
+       SubscriptBox["f", 
+        SubscriptBox["P", "A"]]}]}], ")"}]], TraditionalForm]],
+  FontWeight->"Bold"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "B"]}]], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["C", "A"]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "B"]}]], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["P", "B"]], TraditionalForm]]],
+ "(",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["C", "B"]], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["P", "A"]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "B"]}]], TraditionalForm]]],
+ ")\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "B"]}]], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["P", "B"]], TraditionalForm]]],
+ "(",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["C", "B"]], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["P", "A"]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "B"]}]], TraditionalForm]]],
+ ")\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "B"]}]], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["P", "A"]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "B"]}]], TraditionalForm]]],
+ "= ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["P", "B"]], TraditionalForm]]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["C", "B"]], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    FractionBox[
+     RowBox[{"\[DifferentialD]", 
+      SubscriptBox["P", "A"]}], 
+     RowBox[{"\[DifferentialD]", 
+      SubscriptBox["C", "B"]}]], ")"}], TraditionalForm]]],
+ " (1 - ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["P", "A"]], TraditionalForm]]],
+ ") = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["P", "B"]], TraditionalForm]]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["C", "B"]], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "B"]}]], TraditionalForm]],
+  FontWeight->"Bold"],
+ StyleBox[" = ",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SubscriptBox["f", 
+      SubscriptBox["P", "B"]], 
+     SubscriptBox["g", 
+      SubscriptBox["C", "B"]]}], 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      FormBox[
+       SubscriptBox["g", 
+        SubscriptBox["P", "A"]],
+       TraditionalForm]}], ")"}]], TraditionalForm]],
+  FontWeight->"Bold"],
+ "\nSimilarly\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "B"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "A"]}]], TraditionalForm]],
+  FontWeight->"Bold"],
+ StyleBox[" = ",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SubscriptBox["g", 
+      SubscriptBox["P", "A"]], 
+     SubscriptBox["f", 
+      SubscriptBox["C", "A"]]}], 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      FormBox[
+       SubscriptBox["f", 
+        SubscriptBox["P", "B"]],
+       TraditionalForm]}], ")"}]], TraditionalForm]],
+  FontWeight->"Bold"],
+ "\n\nAssuming\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["C", "A"]], TraditionalForm]]],
+ " \[GreaterEqual] 0 (Firm A increases [weakly] prices due to higher \
+production costs)\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    SubscriptBox["P", "B"]], TraditionalForm]]],
+ " \[GreaterEqual] 0 (Firm A increases [weakly] prices due to higher prices \
+from firm B)\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["C", "B"]], TraditionalForm]]],
+ " \[GreaterEqual] 0 (Firm B increases [weakly] increases prices due to \
+higher production costs)\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    SubscriptBox["P", "A"]], TraditionalForm]]],
+ " \[GreaterEqual] 0 (Firm B increases [weakly] prices due to higher prices \
+from firm A)\n\nWe obtain the following signs\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "A"]}]], TraditionalForm]],
+  FontWeight->"Bold"],
+ " \[GreaterEqual] 0\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "B"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "B"]}]], TraditionalForm]],
+  FontWeight->"Bold"],
+ " \[GreaterEqual] 0\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "A"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "B"]}]], TraditionalForm]],
+  FontWeight->"Bold"],
+ " \[GreaterEqual] 0\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["P", "B"]}], 
+    RowBox[{"\[DifferentialD]", 
+     SubscriptBox["C", "A"]}]], TraditionalForm]],
+  FontWeight->"Bold"],
+ StyleBox[" ",
+  FontWeight->"Bold"],
+ "\[GreaterEqual] 0"
+}], "Text",
+ CellChangeTimes->{{3.6517028547672777`*^9, 3.6517029129965267`*^9}, {
+   3.651702959289466*^9, 3.6517029700121336`*^9}, {3.651703419773736*^9, 
+   3.6517034706155005`*^9}, {3.6517036065990915`*^9, 
+   3.6517037266556177`*^9}, {3.651703758004819*^9, 3.651704169716811*^9}, 
+   3.6517042205096827`*^9, {3.651704267821563*^9, 3.6517042865138645`*^9}, {
+   3.6517065124518733`*^9, 3.6517065691602883`*^9}, {3.6517066219593997`*^9, 
+   3.6517066969738693`*^9}, {3.6517067340012584`*^9, 
+   3.6517070912872677`*^9}, {3.651707443920729*^9, 3.6517079144765263`*^9}, {
+   3.6517079542525034`*^9, 3.651707978656271*^9}, {3.6517080127425337`*^9, 
+   3.651708015313367*^9}, {3.6517080720628357`*^9, 3.6517082869554577`*^9}, {
+   3.6517083515408487`*^9, 3.6517085803378353`*^9}, {3.6517086485036383`*^9, 
+   3.651708736222082*^9}, {3.6517089738700686`*^9, 3.651708977269513*^9}, {
+   3.6517090528769536`*^9, 3.651709054566129*^9}, {3.6517091094925137`*^9, 
+   3.651709109608291*^9}, {3.6517091768674326`*^9, 3.651709216941436*^9}, {
+   3.651709301491194*^9, 3.651709334990699*^9}, {3.6517094352855268`*^9, 
+   3.6517098090517545`*^9}, {3.6517098750173044`*^9, 
+   3.6517098758058367`*^9}, {3.651709906566787*^9, 3.651709991665797*^9}, {
+   3.6517519635780087`*^9, 3.651752135925831*^9}, {3.651752168194824*^9, 
+   3.651752378842233*^9}, {3.6517524517675285`*^9, 3.6517525409680405`*^9}, {
+   3.651752599617112*^9, 3.6517527774358435`*^9}, {3.651752813004159*^9, 
+   3.6517528131542673`*^9}, {3.6517528491625547`*^9, 3.651752851238001*^9}, {
+   3.6517528945517845`*^9, 3.651752911203636*^9}, {3.6517537029678226`*^9, 
+   3.651753813728264*^9}, {3.6517538496702104`*^9, 3.651753869151084*^9}, {
+   3.6517539349444423`*^9, 3.6517540132411427`*^9}, {3.651754076923195*^9, 
+   3.6517541241376195`*^9}, {3.651754199140215*^9, 3.651754276024928*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Mathematica", "Subsection",
+ CellChangeTimes->{{3.651711040225475*^9, 3.6517110420823975`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.651711555955164*^9, 3.651711732492567*^9}, {
+   3.651711786362836*^9, 3.651711853968882*^9}, 3.6517118858185797`*^9, {
+   3.6517119440690575`*^9, 3.651712013197538*^9}, {3.6517121134340754`*^9, 
+   3.65171215534191*^9}, {3.6517122163529654`*^9, 3.651712282553442*^9}, {
+   3.6517123564719696`*^9, 3.6517123600314846`*^9}, {3.651712585618285*^9, 
+   3.6517126085069437`*^9}, {3.6517126399951415`*^9, 3.65171273669506*^9}, {
+   3.651712834364515*^9, 3.6517128776152067`*^9}, 3.6517131916232734`*^9, 
+   3.651713222834545*^9, 3.651713265921624*^9, 3.651713453589952*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 2", "Section",
+ CellChangeTimes->{{3.6517134716498537`*^9, 3.6517134778290563`*^9}}],
+
+Cell[TextData[{
+ "Maximize ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "0.5"], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["y", "0.5"], TraditionalForm]]],
+ " s.t. 2 x + y = k\n\n\[ScriptCapitalL] (x, y, \[Lambda]) = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "0.5"], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["y", "0.5"], TraditionalForm]]],
+ " + \[Lambda] (2 x + y - k)\n\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[PartialD]", "\[ScriptCapitalL]"}], 
+    RowBox[{"\[PartialD]", "x"}]], TraditionalForm]]],
+ " = 0.5 ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", 
+    RowBox[{"-", ".05"}]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["y", "0.5"], TraditionalForm]]],
+ " + 2 \[Lambda] = 0\n\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[PartialD]", "\[ScriptCapitalL]"}], 
+    RowBox[{"\[PartialD]", "x"}]], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    FractionBox["1", 
+     RowBox[{"2", " ", 
+      RowBox[{"\[Sqrt]", "x"}]}]], ")"}], TraditionalForm]]],
+ " \[Sqrt] y + 2 \[Lambda] = 0\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[PartialD]", "\[ScriptCapitalL]"}], 
+    RowBox[{"\[PartialD]", "y"}]], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "0.5"], TraditionalForm]]],
+ " (0.5 ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["y", 
+    RowBox[{"-", "0.5"}]], TraditionalForm]]],
+ ") + \[Lambda] = 0\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[PartialD]", "\[ScriptCapitalL]"}], 
+    RowBox[{"\[PartialD]", "\[Lambda]"}]], TraditionalForm]]],
+ " = 2 x + y - k = 0\n\n\[Lambda] = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "2"], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[Sqrt]", "x"}], 
+    RowBox[{"\[Sqrt]", "y"}]], TraditionalForm]]],
+ "\n2 \[Lambda] =  ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[Sqrt]", "x"}], 
+    RowBox[{"\[Sqrt]", "y"}]], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[PartialD]", "\[ScriptCapitalL]"}], 
+    RowBox[{"\[PartialD]", "x"}]], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    FractionBox[
+     RowBox[{"\[Sqrt]", "y"}], 
+     RowBox[{"2", " ", 
+      RowBox[{"\[Sqrt]", "x"}]}]], ")"}], TraditionalForm]]],
+ "  = - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[Sqrt]", "x"}], 
+    RowBox[{"\[Sqrt]", "y"}]], TraditionalForm]]],
+ "\ny = 2 x - k\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    FractionBox["1", 
+     RowBox[{"2", " ", 
+      RowBox[{"\[Sqrt]", "x"}]}]], ")"}], TraditionalForm]]],
+ " \[Sqrt](2 x - k) + ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[Sqrt]", "x"}], 
+    RowBox[{"\[Sqrt]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", "x"}], "-", "k"}], ")"}]}]], TraditionalForm]]],
+ " = 0\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    FractionBox["1", 
+     RowBox[{"2", " ", 
+      RowBox[{"\[Sqrt]", "x"}]}]], ")"}], TraditionalForm]]],
+ " \[Sqrt](2 x - k) = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"-", 
+     RowBox[{"\[Sqrt]", "x"}]}], 
+    RowBox[{"\[Sqrt]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", "x"}], "-", "k"}], ")"}]}]], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    FractionBox["1", 
+     RowBox[{"2", " ", 
+      RowBox[{"\[Sqrt]", "x"}]}]], ")"}], TraditionalForm]]],
+ " (2 x - k) = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"-", 
+    RowBox[{"\[Sqrt]", "x"}]}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"4", "x"}]], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", " ", "x"}], " ", "-", " ", "k"}], ")"}], "2"]}], 
+   TraditionalForm]]],
+ "= ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "2"], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"4", "x"}]], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", " ", "x"}], " ", "-", " ", "k"}], ")"}]}], 
+   TraditionalForm]]],
+ "(2 x - k) = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "2"], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"4", "x"}]], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"4", " ", 
+       SuperscriptBox["x", "2"]}], " ", "-", " ", 
+      RowBox[{"4", "kx"}], " ", "+", " ", 
+      SuperscriptBox["k", "2"]}], ")"}]}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "2"], TraditionalForm]]],
+ "\nx - k + ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SuperscriptBox["k", "2"], 
+    RowBox[{"4", "x"}]], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "2"], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "2"], TraditionalForm]]],
+ " - k x + ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SuperscriptBox["k", "2"], "4"], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "3"], TraditionalForm]]],
+ "\n-",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "3"], TraditionalForm]]],
+ "+ ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "2"], TraditionalForm]]],
+ " - k x + ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SuperscriptBox["k", "2"], "4"], TraditionalForm]]],
+ " = 0"
+}], "Text",
+ CellChangeTimes->{{3.6517135385082917`*^9, 3.6517137015528045`*^9}, {
+   3.65171373550758*^9, 3.651713840074348*^9}, {3.651713879897845*^9, 
+   3.6517139032274704`*^9}, 3.651713944664572*^9, {3.651713976102992*^9, 
+   3.6517140973572283`*^9}, {3.6517141300105143`*^9, 
+   3.6517142144736867`*^9}, {3.6517143204022646`*^9, 3.651714328795489*^9}, {
+   3.651714371103651*^9, 3.651714380022708*^9}, {3.6517144268510923`*^9, 
+   3.6517147936626844`*^9}, {3.651714866994567*^9, 3.6517149062742414`*^9}, {
+   3.651714959152804*^9, 3.6517149729586377`*^9}, {3.651715028019374*^9, 
+   3.651715144257202*^9}, {3.6517155989940877`*^9, 3.651715599667571*^9}, {
+   3.651716104611882*^9, 3.6517162689148364`*^9}, {3.651716331667369*^9, 
+   3.6517164153029723`*^9}, {3.651716496035904*^9, 3.6517167051289644`*^9}, {
+   3.6517167438722115`*^9, 3.651716815466157*^9}, {3.6517168943201838`*^9, 
+   3.6517168955100613`*^9}, {3.6517776273105693`*^9, 
+   3.6517777946781282`*^9}, {3.651859260424932*^9, 3.6518592666623745`*^9}, {
+   3.6518594788694115`*^9, 3.6518595257469416`*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1432, 864},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+Magnification->2.,
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 93, 1, 202, "Title"],
+Cell[CellGroupData[{
+Cell[698, 27, 96, 1, 140, "Section"],
+Cell[CellGroupData[{
+Cell[819, 32, 105, 1, 98, "Subsection"],
+Cell[927, 35, 19927, 763, 2696, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20891, 803, 101, 1, 95, "Subsection"],
+Cell[20995, 806, 616, 8, 60, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21660, 820, 99, 1, 140, "Section"],
+Cell[21762, 823, 6487, 244, 1227, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
