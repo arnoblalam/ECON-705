@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    123039,       2657]
-NotebookOptionsPosition[    120138,       2559]
-NotebookOutlinePosition[    120519,       2575]
-CellTagsIndexPosition[    120476,       2572]
+NotebookDataLength[    147659,       3318]
+NotebookOptionsPosition[    144141,       3199]
+NotebookOutlinePosition[    144521,       3215]
+CellTagsIndexPosition[    144478,       3212]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -174,7 +174,7 @@ Cell[BoxData[{
  RowBox[{"We", " ", "can", "  ", "find", "  ", 
   FractionBox["dr", "df"], " ", "by", " ", "dividing", " ", "the", " ", 
   "first", " ", "row", " ", "of", " ", "the", " ", "matrix", " ", "by", " ", 
-  "df"}]}], "Text",
+  RowBox[{"df", "."}]}]}], "Text",
  CellChangeTimes->{{3.6527457772197046`*^9, 3.6527458054510884`*^9}, {
    3.6527458400902357`*^9, 3.652745898481882*^9}, {3.652746154119318*^9, 
    3.6527462305822353`*^9}, {3.6527483886453314`*^9, 
@@ -193,7 +193,7 @@ Cell[BoxData[{
    3.6527583895759926`*^9, 3.6527584008154874`*^9}, {3.652758446534891*^9, 
    3.652758467958095*^9}, {3.652759345663313*^9, 3.652759407742057*^9}, {
    3.652759444414161*^9, 3.652759463622091*^9}, {3.652759511132595*^9, 
-   3.652759760731513*^9}}]
+   3.652759760731513*^9}, {3.65299080160793*^9, 3.6529908186961193`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -316,21 +316,24 @@ Cell[BoxData[
      RowBox[{"px", " ", "x"}], "+", 
      RowBox[{"py", " ", "y"}]}], ")"}], " ", "\[Lambda]"}]}]], "Output",
  CellChangeTimes->{
-  3.652760466162701*^9, {3.652760515440097*^9, 3.6527605573655643`*^9}}],
+  3.652760466162701*^9, {3.652760515440097*^9, 3.6527605573655643`*^9}, 
+   3.6529913140890484`*^9}],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"y", "+", 
    RowBox[{"px", " ", "\[Lambda]"}]}], "\[Equal]", "0"}]], "Output",
  CellChangeTimes->{
-  3.652760466162701*^9, {3.652760515440097*^9, 3.6527605573728456`*^9}}],
+  3.652760466162701*^9, {3.652760515440097*^9, 3.6527605573655643`*^9}, 
+   3.65299131409105*^9}],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"x", "+", 
    RowBox[{"py", " ", "\[Lambda]"}]}], "\[Equal]", "0"}]], "Output",
  CellChangeTimes->{
-  3.652760466162701*^9, {3.652760515440097*^9, 3.652760557375082*^9}}],
+  3.652760466162701*^9, {3.652760515440097*^9, 3.6527605573655643`*^9}, 
+   3.65299131409307*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -339,7 +342,8 @@ Cell[BoxData[
    RowBox[{"px", " ", "x"}], "+", 
    RowBox[{"py", " ", "y"}]}], "\[Equal]", "0"}]], "Output",
  CellChangeTimes->{
-  3.652760466162701*^9, {3.652760515440097*^9, 3.652760557378084*^9}}],
+  3.652760466162701*^9, {3.652760515440097*^9, 3.6527605573655643`*^9}, 
+   3.652991314094051*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -354,8 +358,644 @@ Cell[BoxData[
       FractionBox["50", 
        RowBox[{"px", " ", "py"}]]}]}]}], "}"}], "}"}]], "Output",
  CellChangeTimes->{
-  3.652760466162701*^9, {3.652760515440097*^9, 3.6527605573810883`*^9}}]
-}, Open  ]]
+  3.652760466162701*^9, {3.652760515440097*^9, 3.6527605573655643`*^9}, 
+   3.652991314111064*^9}]
+}, Open  ]],
+
+Cell["The elasticity of the functions are: ", "Text",
+ CellChangeTimes->{{3.652990828214426*^9, 3.652990837433549*^9}, {
+  3.6529908775980525`*^9, 3.6529909127540207`*^9}, {3.6529909608907847`*^9, 
+  3.652991013733176*^9}, {3.652991043943944*^9, 3.6529911126787405`*^9}, {
+  3.6529912154624534`*^9, 3.652991221437718*^9}, {3.6529912904078617`*^9, 
+  3.6529913069666114`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 3", "Section",
+ CellChangeTimes->{{3.652975990377268*^9, 3.652975992097519*^9}}],
+
+Cell[TextData[{
+ "Corbae 2.5.3\n\nWe write the relations in matrix form for convenience:\n\n\
+The \[LessEqual] relation) on the set {0, 1, 2, 3,4}:\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"1", "1", "1", "1", "1"},
+      {"0", "1", "1", "1", "1"},
+      {"0", "0", "1", "1", "1"},
+      {"0", "0", "0", "1", "1"},
+      {"0", "0", "0", "0", "1"}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nWe can see that the matrix is upper traingular.  For every element in {0, \
+1, 2, 3,4} either aRb or bRa. We also see that the diagonals are all 1, \
+therefore it is reflexive.\n\nThe = relation on {0, 1, 2, 3, 4}:\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"1", "0", "0", "0", "0"},
+      {"0", "1", "0", "0", "0"},
+      {"0", "0", "1", "0", "0"},
+      {"0", "0", "0", "1", "0"},
+      {"0", "0", "0", "0", "1"}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nWe can see that this relation is not complete because (for example) \
+neither (0, 1) nor (1, 0) are in the set of =.  This relationship is \
+transitive because it is only defined for elements for identical elements.\n\n\
+The < relation on {0, 1, 2, 3, 4}:\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"0", "1", "1", "1", "1"},
+      {"0", "0", "1", "1", "1"},
+      {"0", "0", "0", "1", "1"},
+      {"0", "0", "0", "0", "1"},
+      {"0", "0", "0", "0", "0"}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nThis relation is not complete because (0, 0) is not in the set of >.\nThe \
+relation is transitive because for any aRb \[And] bRc \[Implies] aRc (we can \
+see this in the matrix representation, where all elements to the right of the \
+first \[OpenCurlyDoubleQuote]1\[CloseCurlyDoubleQuote] in a row are also 1.\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"0", "1", "1", "1", "1"},
+      {"1", "0", "1", "1", "1"},
+      {"1", "1", "0", "1", "1"},
+      {"1", "1", "1", "0", "1"},
+      {"1", "1", "1", "1", "0"}
+     }], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\nWe can see the relation is not complete because elements such as (0, 0) \
+are not in the set of \[NotEqual].  We can see the set is not transitive \
+because 3 \[NotEqual] 1, 1 \[NotEqual] 3 does not imply 3 \[NotEqual] 3 (that \
+is, (1,3) and (3, 1) are in the set of the relation \[NotEqual], but (1, 1) \
+is not)."
+}], "Text",
+ CellChangeTimes->{{3.652976018286855*^9, 3.6529760185368905`*^9}, {
+  3.6529920066134634`*^9, 3.652992239118681*^9}, {3.652992275798979*^9, 
+  3.652992378557332*^9}, {3.6529924147264166`*^9, 3.652992578473216*^9}, {
+  3.652992622794402*^9, 3.652993154856105*^9}, {3.6529932193415813`*^9, 
+  3.6529932380408583`*^9}, {3.6529933066682024`*^9, 3.6529933676875114`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 4", "Section",
+ CellChangeTimes->{{3.6529760220063057`*^9, 3.6529760236464415`*^9}}],
+
+Cell[TextData[{
+ StyleBox["P 72",
+  FontVariations->{"Underline"->True}],
+ "\n1 a. Negate \[OpenCurlyDoubleQuote]Everyone who is majoring in math has a \
+friend who needs help with his homework.\[CloseCurlyDoubleQuote]\nLet A be \
+the set of people majoring in math\nLet B be the set of people who need help \
+with homework\nLet xFy be the relation x and y are friends\nWe can write the \
+above symbolically as\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] A ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", "y"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] B \[And] (x, y) \[Element] F\nNegating this:\n\[Not](",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] A ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", "y"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] B such that (x, y) \[Element] F)\n\[Equivalent] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["\[Exists]", "x"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] A \[Not] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["\[Exists]", "y"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] B such that (x,y) \[Element] F)\n\[Equivalent] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["\[Exists]", "x"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] A such that ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "y"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] B \[Not](x, y) \[Element] F)\n\[Equivalent] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["\[Exists]", "x"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] such that A ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "y"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] B \[Not](x, y) \[NotElement] F)\n\nWhich we can rewrite this as \
+\[OpenCurlyDoubleQuote]there is someone who is majoring in math who doesn\
+\[CloseCurlyQuote]t have any friends who needs help with math\
+\[CloseCurlyDoubleQuote]. \n1 b. Negate \[OpenCurlyDoubleQuote]Everyone has a \
+roommate who dislikes everyone.\[CloseCurlyDoubleQuote]\nLet xDy be the \
+relation x dislikes y\nLet xRy be the relation x and y are roommates\nWe can \
+rewrite the above statement symbolically as:\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", "y"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " s.t. (x,y) \[Element] R \[And] (x,y) \[Element] D\n\[Not](",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", "y"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " s.t. (x,y) \[Element] R \[And] (x,y) \[Element] D)\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["\[Exists]", "x"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Not](",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", "y"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " s.t. (x,y) \[Element] R \[And] (x,y) \[Element] D))\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["\[Exists]", "x"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " s.t. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["\[ForAll]", "y"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Not]((x,y) \[Element] R \[And] (x,y) \[Element] D)))\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["\[Exists]", "x"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " s.t. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["\[ForAll]", "y"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (\[Not](x,y) \[Element] R \[Or] \[Not](x,y) \[Element] D)))\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["\[Exists]", "x"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " s.t. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["\[ForAll]", "y"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ((x,y) \[Element] R \[Or] (x,y) \[Element] D)))\nThere is someone who has \
+a roommate who doesn\[CloseCurlyQuote]t dislike everyone.\n\n1 c.\nNegate A \
+\[Union] B \[SubsetEqual] C \\ D\n\[Not](A \[Union] B \[SubsetEqual] C \\ D)\n\
+\[Equivalent]\[Not]A \[Intersection] \[Not] B \[SubsetEqual] C \\D)\n\
+\[Equivalent]\[Not]A\[Intersection]B\[NotSubsetEqual](C\\D)\n\n1 d.\nNegate ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "y"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " [y > x \[Implies] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", "z"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SuperscriptBox["z", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + 5 z = y)\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", "y"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " [y > x \[Implies] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "z"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SuperscriptBox["z", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + 5 z \[NotEqual] y)\n\n2.\na. There is someone in the freshman class who \
+doesn\[CloseCurlyQuote]t have a roommate.\nEveryone in the freshman class has \
+a roommate\n\nb. Everyone likes someone, but no one likes everyone\nThere is \
+someone who doesn\[CloseCurlyQuote]t like anyone or there is someone who \
+likes everyone\n\nc. ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "a"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] A ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", "b"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] B (a \[Element] C \[DoubleLeftRightArrow] b \[Element] C)\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", "a"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] A ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "b"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] B \[Not](a \[Element] C \[DoubleLeftRightArrow] b \[Element] C)\
+\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", "a"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] A ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "b"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] B (a \[Element] C \[And] b \[NotElement] C) \[Or] (a \
+\[NotElement] C \[And] b \[Element] C)\n\nd. ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "y"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > 0 ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "(a ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + b x + c = y)\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > 0 ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (a ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + b x + c \[NotEqual] y)\n\n3.\na. False.\nConsider the number 2\nThere \
+are no a, b, c in the natural number \[DoubleStruckCapitalN] = {1, 2, 3...} \
+such that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", "^", "2"}], " ", "+", " ", 
+    RowBox[{"b", "^", "2"}], "+", 
+    SuperscriptBox["c", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 2 (however, the statement is false if 0 is in the natural numbers).\n\n\
+b. False\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["E", 
+    RowBox[{"!", "x"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"x", " ", "-", " ", "4"}], ")"}], "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 9\n",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"x", " ", "-", " ", "4"}], ")"}], "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " - 9 = 0\nx == 1 || x == 7\n\nc. ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", 
+    RowBox[{"!", "x"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"x", " ", "-", " ", "4"}], ")"}], "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 25\nFalse, x = 1 or x = 9\n\nd. True. From previous example, if x = 1 \
+and y = 9 then (x - 4)^2 = 25 and (y - 4)^2 = 25\n\n4. Prove ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Not]", 
+      SubscriptBox["\[ForAll]", "x"]}], 
+     RowBox[{"P", "(", "x", ")"}]}], "\[Equivalent]", 
+    SubscriptBox["\[Exists]", "x"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[Not]P(x)\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Not]", 
+      SubscriptBox["\[Exists]", "x"]}], 
+     RowBox[{"P", "(", "x", ")"}]}], "\[Equivalent]", 
+    SubscriptBox["\[ForAll]", "x"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[Not]P(x)\nnegate both side\n\[Not](",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[Not]", 
+       SubscriptBox["\[Exists]", "x"]}], 
+      RowBox[{"P", "(", "x", ")"}]}], ")"}], "\[Equivalent]", 
+    RowBox[{"\[Not]", 
+     RowBox[{"(", 
+      SubscriptBox["\[ForAll]", "x"]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[Not]P(x))\ndistribute\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[CapitalEpsilon]", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[Not]P(x) \[Equivalent] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"\[Not]", 
+     SubscriptBox["A", "x"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "P(x))\n\n5. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Not]", 
+    SubscriptBox["E", "x"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[Element]A ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"P", 
+     RowBox[{"(", "x", ")"}]}], "\[Equivalent]", 
+    SubscriptBox["\[ForAll]", "x"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[Not]P(x)\nby quantifier negation law\n\n",
+ StyleBox["P. 170",
+  FontVariations->{"Underline"->True}],
+ "\n4.\nA = {1, 2, 3}\nB = {1, 4}\nC = {3, 4}\nD = {5}\nB \[Union] C = {1, 3, \
+4}\nB \[Intersection] C = {4}\nA \[Union] C = {1, 2, 3, 4}\nA \[Intersection] \
+C = {3}\nB \[Union] D = {1, 4, 5}\nB \[Intersection] D = {}\nA \[Times] B = \
+{(1, 1), (1, 4), {2, 1), (2, 4), (3, 1), (3, 4)}\nA x C = {(1, 3), (1, 4), \
+(2,3), (2, 4), (3, 3), (3, 4)}\nC \[Times] D = {(3, 5), (4, 5)}\n \n A \
+\[Times] (B \[Intersection] C) = (A \[Times] B) \[Intersection] (A \[Times] \
+C)\n {1, 2, 3} \[Times] {4} = {(1, 1), (1, 4), {2, 1), (2, 4), (3, 1), (3, \
+4)} \[Intersection] {(1, 3), (1, 4), (2,3), (2, 4), (3, 3), (3, 4)}\n {(1, \
+4), (2, 4), (3, 4)} = {(1,4), (2, 4), (3, 4)}\n \n  A \[Times] (B \[Union] C) \
+= (A \[Times] B) \[Union] (A \[Times] C)\n   {1, 2, 3} \[Times] {1, 3, 4} = \
+{(1, 1), (1, 4), {2, 1), (2, 4), (3, 1), (3, 4)} \[Union]  {(1, 3), (1, 4), \
+(2,3), (2, 4), (3, 3), (3, 4)}\n   {(1, 1), (1, 3), (1, 4), (2, 1), (2, 3), \
+(2, 4), (3, 1), (3, 3), (3, 4)} =  {(1, 1), (1, 3), (1, 4), {2, 1), (2,3), \
+(2, 4), (3, 1), (3, 3), (3, 4)}\n   \n   (A \[Times] B) \[Intersection] ( C \
+\[Times] D) = (A \[Intersection] C) \[Times] (B \[Intersection] D)\n   {(1, \
+1), (1, 4), {2, 1), (2, 4), (3, 1), (3, 4)} \[Intersection] {(3, 5), (4, 5)} \
+= {3} \[Intersection] {}\n   {} = {}\n   \n   (A \[Times] B) \[Union] (C \
+\[Times] D) \[SubsetEqual] (A \[Union] C) \[Times] (B \[Union] D)\n   {(1, \
+1), (1, 4), {2, 1), (2, 4), (3, 1), (3, 4)} \[Union] {(3, 5), (4, 5)} \
+\[SubsetEqual] {1, 2, 3, 4} \[Times]  {1, 4, 5}\n   {(1, 1), (1, 4), {2, 1), \
+(2, 4), (3, 1), (3, 4), (3, 5), (4, 5)} \[SubsetEqual] {(1, 1), (1, 4), (1, \
+5), (2, 1), (2, 4), (2, 4), (3, 1), (3, 4), (3, 5), (4, 1), (4, 4), (4, 5)}\n \
+  \n   A \[Times] \[EmptySet] = \[EmptySet] \[Times] A = \[EmptySet]\n   {1, \
+2, 3} \[Times] \[EmptySet] = \[EmptySet]\n   \[EmptySet] \[Times] {1, 2, 3} = \
+\[EmptySet] (see page 166).\n   \n   7. If A has m elements and B has n A \
+\[Times] B will have m \[Times] n elements.\n   \n   ",
+ StyleBox["P. 178",
+  FontVariations->{"Underline"->True}],
+ "\n   1 a. {(p, q} \[Element] P \[Times] P | the person p is a parent of the \
+person q}, where P is the set of all living people}\n   The domain is the set \
+of all living people.\n   The range is the set of all living people with a \
+living parent.\n   \n   b. {(x, y) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[DoubleStruckCapitalR]", "2"], "|", 
+    RowBox[{"y", ">", 
+     SuperscriptBox["x", "2"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "}\n   The doman is \[DoubleStruckCapitalR]. The range is all non-negative \
+real numbers. \n   \n   2 a.  {(p,q) \[Element] P \[Times] P |the person p is \
+a brother of the person q} P is the set of all living people.\n   The domain \
+is the set of all living people. The range is the set of all living people \
+with a living brother.\n   \n  b.  {(x, y) \[Element] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalR]", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " | ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"=", 
+    RowBox[{"1", "\[Minus]", 
+     RowBox[{"2", "/", 
+      RowBox[{"(", 
+       SuperscriptBox["x", "2"]}]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + 1)}.\n  The domain is the set of all real numbers.  the range is -1 < y \
+< 1.\n   "
+}], "Text",
+ CellChangeTimes->{{3.6529760259771013`*^9, 3.652976026221298*^9}, {
+   3.65297650481648*^9, 3.6529765847354527`*^9}, {3.6529766202610083`*^9, 
+   3.6529767164384947`*^9}, {3.652976817222546*^9, 3.652976825335164*^9}, {
+   3.6529768553654785`*^9, 3.6529769691726894`*^9}, {3.6529770059613576`*^9, 
+   3.6529772025302343`*^9}, {3.6529773495238247`*^9, 
+   3.6529773814203634`*^9}, {3.6529774357105083`*^9, 
+   3.6529776591376085`*^9}, {3.652977720293912*^9, 3.6529783502556114`*^9}, {
+   3.652978398783993*^9, 3.6529784390081644`*^9}, {3.6529790769032974`*^9, 
+   3.6529793157698593`*^9}, {3.652979418802637*^9, 3.652979430536936*^9}, {
+   3.652979550174766*^9, 3.6529795503158665`*^9}, {3.6529795907051296`*^9, 
+   3.6529796132342405`*^9}, {3.652979701014221*^9, 3.6529799826962495`*^9}, {
+   3.6529800287256885`*^9, 3.652980083134089*^9}, {3.652980121523431*^9, 
+   3.65298014520119*^9}, {3.6529801819714346`*^9, 3.6529803606467*^9}, {
+   3.6529803910162535`*^9, 3.65298045891787*^9}, {3.652980753477129*^9, 
+   3.6529808925639873`*^9}, {3.65298097161491*^9, 3.6529809891142783`*^9}, {
+   3.6529810249141026`*^9, 3.6529810964840684`*^9}, {3.652981171250759*^9, 
+   3.6529811910017776`*^9}, {3.652981244173354*^9, 3.652981252527277*^9}, {
+   3.6529813289944315`*^9, 3.6529814258689733`*^9}, {3.652981462983598*^9, 
+   3.6529815002290306`*^9}, {3.652981570503743*^9, 3.652981645802786*^9}, {
+   3.6529817218407097`*^9, 3.6529817745202427`*^9}, {3.6529818169904633`*^9, 
+   3.6529818497995677`*^9}, {3.652981950841091*^9, 3.652981995135914*^9}, {
+   3.65298202966442*^9, 3.6529820814260635`*^9}, {3.652982143578041*^9, 
+   3.652982301430692*^9}, {3.6529823986745586`*^9, 3.652982420848609*^9}, {
+   3.6529825677436247`*^9, 3.6529827292152843`*^9}, {3.6529828030706244`*^9, 
+   3.652982910269786*^9}, {3.6529829506944075`*^9, 3.6529831970961876`*^9}, {
+   3.652983262752185*^9, 3.6529833994434605`*^9}, {3.652983538246086*^9, 
+   3.652983544178295*^9}, {3.6529836041338744`*^9, 3.652983972539819*^9}, {
+   3.6529840145520716`*^9, 3.6529846636178493`*^9}, {3.6529847348383393`*^9, 
+   3.6529848383719406`*^9}, {3.6529848878784456`*^9, 3.652985035969975*^9}, {
+   3.652985071601829*^9, 3.65298511578896*^9}, {3.652985355874346*^9, 
+   3.652985455886272*^9}, {3.6529855124606853`*^9, 3.652985540466568*^9}, {
+   3.6529858070220895`*^9, 3.6529858087723303`*^9}, {3.6529858406630116`*^9, 
+   3.652985988304577*^9}, 3.6529862069499283`*^9, {3.6529865888360825`*^9, 
+   3.6529866106462193`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 5", "Section",
+ CellChangeTimes->{{3.6529760334991393`*^9, 3.6529760431269727`*^9}}],
+
+Cell["\<\
+The theorem and proof are not correct.  Consider an empty relation (i.e. no \
+two elements of the non-empty set are in the relation). Then R is trasnsitive \
+and symmetric, but not reflexive.  in order to fix the proof, we must add we \
+must add a quantifier condition (that is for every element a in the set, \
+there exists at least one b such that aRb).\
+\>", "Text",
+ CellChangeTimes->{{3.6529760438644958`*^9, 3.652976046177138*^9}, {
+  3.6529900951312523`*^9, 3.652990216579425*^9}, {3.6529903810030956`*^9, 
+  3.652990569873229*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 6", "Section",
+ CellChangeTimes->{{3.6529760642455435`*^9, 3.652976066155923*^9}}],
+
+Cell[TextData[{
+ "if relation R is irreflexive than ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "a"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[Not](aRa).\nIf relation R is antisymmetric, then ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", 
+    RowBox[{"a", ",", " ", "b"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (aRb \[And] bRa) \[Implies] a = b\nTherefore ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", 
+    RowBox[{"a", ",", " ", "b"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ((aRb \[And] bRa) \[Implies] a = b) \[And] \[Not](aRa) \[Equivalent] (\
+\[Not](aRb \[And] bRa) \[Or] a = b) \[And] \[Not] (aRa) \[Equivalent] \
+(\[Not]aRb \[Or] \[Not]bRa \[Or] a = b) \[And] \[Not] aRa\[Equivalent]aRb \
+\[Implies] \[Not]bRa"
+}], "Text",
+ CellChangeTimes->{{3.65297606812632*^9, 3.6529760683364487`*^9}, 
+   3.652986656402358*^9, {3.6529867053404894`*^9, 3.6529867350499115`*^9}, {
+   3.6529867689101005`*^9, 3.6529868721984563`*^9}, {3.6529869873693075`*^9, 
+   3.6529870534005003`*^9}, {3.6529871367933855`*^9, 
+   3.6529871400926075`*^9}, {3.6529871927007713`*^9, 3.652987216431614*^9}, {
+   3.652987272119893*^9, 3.652987555697005*^9}, {3.65298763875973*^9, 
+   3.652987654899151*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 7", "Section",
+ CellChangeTimes->{{3.6529760706861143`*^9, 3.652976072086108*^9}}],
+
+Cell[TextData[{
+ "R is symmetric: iff ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["a", "ij"], TraditionalForm]]],
+ " = 1 then ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["a", "ji"], TraditionalForm]]],
+ " = 1 in the bolean matrix representation (where ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["a", "ij"], TraditionalForm]]],
+ " is the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["i", "th"], TraditionalForm]]],
+ " row and ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["j", "th"], TraditionalForm]]],
+ " column of the boolean matrix representation of the relationship).\n\
+Asymettric relation: iff ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["a", "ij"], TraditionalForm]]],
+ " = 1 then ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["a", "ji"], TraditionalForm]]],
+ " = 0.\nIf R is complete, then the matrix is triangular."
+}], "Text",
+ CellChangeTimes->{{3.65297607437573*^9, 3.6529760746159034`*^9}, {
+  3.652989137641882*^9, 3.6529891378971643`*^9}, {3.6529892083565083`*^9, 
+  3.6529893035540476`*^9}, {3.6529893835490417`*^9, 3.652989597126062*^9}, {
+  3.6529923133882203`*^9, 3.652992314698127*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2557,8 +3197,8 @@ Cell[BoxData[
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1920, 997},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{1424, 901},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 TaggingRules->{"$testsRun" -> False},
 FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
 StyleDefinitions->"Default.nb"
@@ -2574,89 +3214,110 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 128, 1, 81, "Section"],
+Cell[558, 20, 128, 1, 92, "Section"],
 Cell[CellGroupData[{
-Cell[711, 25, 97, 1, 49, "Section"],
-Cell[811, 28, 5875, 167, 299, "Text"]
+Cell[711, 25, 97, 1, 56, "Section"],
+Cell[811, 28, 5937, 167, 299, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6723, 200, 99, 1, 63, "Section"],
-Cell[6825, 203, 1857, 66, 153, "Text"],
+Cell[6785, 200, 99, 1, 70, "Section"],
+Cell[6887, 203, 1857, 66, 153, "Text"],
 Cell[CellGroupData[{
-Cell[8707, 273, 1123, 33, 112, "Input"],
-Cell[9833, 308, 333, 10, 31, "Output"],
-Cell[10169, 320, 206, 5, 31, "Output"],
-Cell[10378, 327, 204, 5, 31, "Output"],
-Cell[10585, 334, 252, 7, 31, "Output"],
-Cell[10840, 343, 430, 13, 105, "Output"]
+Cell[8769, 273, 1123, 33, 112, "Input"],
+Cell[9895, 308, 361, 11, 31, "Output"],
+Cell[10259, 321, 231, 6, 31, "Output"],
+Cell[10493, 329, 231, 6, 31, "Output"],
+Cell[10727, 337, 280, 8, 31, "Output"],
+Cell[11010, 347, 456, 14, 48, "Output"]
+}, Open  ]],
+Cell[11481, 364, 375, 5, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11893, 374, 95, 1, 70, "Section"],
+Cell[11991, 377, 2800, 64, 679, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14828, 446, 99, 1, 70, "Section"],
+Cell[14930, 449, 17008, 451, 2493, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31975, 905, 99, 1, 70, "Section"],
+Cell[32077, 908, 549, 9, 49, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32663, 922, 97, 1, 70, "Section"],
+Cell[32763, 925, 1272, 29, 72, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34072, 959, 97, 1, 70, "Section"],
+Cell[34172, 962, 1113, 35, 76, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35322, 1002, 108, 1, 70, "Section"],
+Cell[CellGroupData[{
+Cell[35455, 1007, 3417, 87, 292, "Input"],
+Cell[38875, 1096, 1612, 32, 177, "Output"],
+Cell[40490, 1130, 26898, 481, 404, "Output"],
+Cell[67391, 1613, 1615, 32, 177, "Output"],
+Cell[69009, 1647, 7862, 134, 411, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11319, 362, 108, 1, 63, "Section"],
+Cell[76920, 1787, 107, 1, 70, "Section"],
 Cell[CellGroupData[{
-Cell[11452, 367, 3417, 87, 292, "Input"],
-Cell[14872, 456, 1612, 32, 177, "Output"],
-Cell[16487, 490, 26898, 481, 404, "Output"],
-Cell[43388, 973, 1615, 32, 177, "Output"],
-Cell[45006, 1007, 7862, 134, 411, "Output"]
+Cell[77052, 1792, 947, 23, 72, "Input"],
+Cell[78002, 1817, 668, 16, 31, "Output"],
+Cell[78673, 1835, 1194, 25, 108, "Output"],
+Cell[79870, 1862, 7166, 130, 270, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87073, 1997, 2410, 54, 272, "Input"],
+Cell[89486, 2053, 567, 9, 31, "Output"],
+Cell[90056, 2064, 565, 9, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[90658, 2078, 1729, 43, 172, "Input"],
+Cell[92390, 2123, 479, 9, 31, "Output"],
+Cell[92872, 2134, 8362, 150, 229, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[101271, 2289, 1790, 44, 152, "Input"],
+Cell[103064, 2335, 268, 5, 31, "Output"],
+Cell[103335, 2342, 3643, 67, 255, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[52917, 1147, 107, 1, 63, "Section"],
+Cell[107027, 2415, 109, 1, 63, "Section"],
 Cell[CellGroupData[{
-Cell[53049, 1152, 947, 23, 72, "Input"],
-Cell[53999, 1177, 668, 16, 31, "Output"],
-Cell[54670, 1195, 1194, 25, 108, "Output"],
-Cell[55867, 1222, 7166, 130, 270, "Output"]
+Cell[107161, 2420, 1110, 27, 72, "Input"],
+Cell[108274, 2449, 6282, 114, 385, "Output"],
+Cell[114559, 2565, 9363, 195, 75, "Output"],
+Cell[123925, 2762, 1804, 40, 123, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[63070, 1357, 2410, 54, 272, "Input"],
-Cell[65483, 1413, 567, 9, 31, "Output"],
-Cell[66053, 1424, 565, 9, 31, "Output"]
+Cell[125766, 2807, 248, 5, 31, "Input"],
+Cell[126017, 2814, 5535, 89, 201, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[66655, 1438, 1729, 43, 172, "Input"],
-Cell[68387, 1483, 479, 9, 31, "Output"],
-Cell[68869, 1494, 8362, 150, 229, "Output"]
+Cell[131589, 2908, 165, 3, 31, "Input"],
+Cell[131757, 2913, 329, 6, 30, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[77268, 1649, 1790, 44, 152, "Input"],
-Cell[79061, 1695, 268, 5, 31, "Output"],
-Cell[79332, 1702, 3643, 67, 255, "Output"]
+Cell[132123, 2924, 126, 2, 40, "Input"],
+Cell[132252, 2928, 569, 19, 40, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[132858, 2952, 264, 6, 40, "Input"],
+Cell[133125, 2960, 1024, 27, 273, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[83024, 1775, 109, 1, 63, "Section"],
+Cell[134198, 2993, 109, 1, 65, "Section"],
 Cell[CellGroupData[{
-Cell[83158, 1780, 1110, 27, 72, "Input"],
-Cell[84271, 1809, 6282, 114, 385, "Output"],
-Cell[90556, 1925, 9363, 195, 75, "Output"],
-Cell[99922, 2122, 1804, 40, 123, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[101763, 2167, 248, 5, 31, "Input"],
-Cell[102014, 2174, 5535, 89, 201, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[107586, 2268, 165, 3, 31, "Input"],
-Cell[107754, 2273, 329, 6, 30, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[108120, 2284, 126, 2, 40, "Input"],
-Cell[108249, 2288, 569, 19, 40, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[108855, 2312, 264, 6, 40, "Input"],
-Cell[109122, 2320, 1024, 27, 273, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[110195, 2353, 109, 1, 65, "Section"],
-Cell[CellGroupData[{
-Cell[110329, 2358, 1294, 26, 81, "Input"],
-Cell[111626, 2386, 944, 21, 40, "Output"],
-Cell[112573, 2409, 6486, 116, 299, "Output"],
-Cell[119062, 2527, 1048, 28, 110, "Output"]
+Cell[134332, 2998, 1294, 26, 81, "Input"],
+Cell[135629, 3026, 944, 21, 40, "Output"],
+Cell[136576, 3049, 6486, 116, 299, "Output"],
+Cell[143065, 3167, 1048, 28, 110, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
