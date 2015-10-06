@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    147659,       3318]
-NotebookOptionsPosition[    144141,       3199]
-NotebookOutlinePosition[    144521,       3215]
-CellTagsIndexPosition[    144478,       3212]
+NotebookDataLength[    149718,       3361]
+NotebookOptionsPosition[    146195,       3242]
+NotebookOutlinePosition[    146576,       3258]
+CellTagsIndexPosition[    146533,       3255]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -386,8 +386,7 @@ The \[LessEqual] relation) on the set {0, 1, 2, 3,4}:\n",
       {"0", "0", "1", "1", "1"},
       {"0", "0", "0", "1", "1"},
       {"0", "0", "0", "0", "1"}
-     }], ")"}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+     }], ")"}], TraditionalForm]]],
  "\nWe can see that the matrix is upper traingular.  For every element in {0, \
 1, 2, 3,4} either aRb or bRa. We also see that the diagonals are all 1, \
 therefore it is reflexive.\n\nThe = relation on {0, 1, 2, 3, 4}:\n",
@@ -399,8 +398,7 @@ therefore it is reflexive.\n\nThe = relation on {0, 1, 2, 3, 4}:\n",
       {"0", "0", "1", "0", "0"},
       {"0", "0", "0", "1", "0"},
       {"0", "0", "0", "0", "1"}
-     }], ")"}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+     }], ")"}], TraditionalForm]]],
  "\nWe can see that this relation is not complete because (for example) \
 neither (0, 1) nor (1, 0) are in the set of =.  This relationship is \
 transitive because it is only defined for elements for identical elements.\n\n\
@@ -413,8 +411,7 @@ The < relation on {0, 1, 2, 3, 4}:\n",
       {"0", "0", "0", "1", "1"},
       {"0", "0", "0", "0", "1"},
       {"0", "0", "0", "0", "0"}
-     }], ")"}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+     }], ")"}], TraditionalForm]]],
  "\nThis relation is not complete because (0, 0) is not in the set of >.\nThe \
 relation is transitive because for any aRb \[And] bRc \[Implies] aRc (we can \
 see this in the matrix representation, where all elements to the right of the \
@@ -427,19 +424,65 @@ first \[OpenCurlyDoubleQuote]1\[CloseCurlyDoubleQuote] in a row are also 1.\n",
       {"1", "1", "0", "1", "1"},
       {"1", "1", "1", "0", "1"},
       {"1", "1", "1", "1", "0"}
-     }], ")"}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+     }], ")"}], TraditionalForm]]],
  "\n\nWe can see the relation is not complete because elements such as (0, 0) \
 are not in the set of \[NotEqual].  We can see the set is not transitive \
 because 3 \[NotEqual] 1, 1 \[NotEqual] 3 does not imply 3 \[NotEqual] 3 (that \
 is, (1,3) and (3, 1) are in the set of the relation \[NotEqual], but (1, 1) \
-is not)."
+is not).\n\nFor example 2.5.6 we have\[AliasDelimiter]\n\n",
+ Cell[BoxData[
+  FormBox[GridBox[{
+     {"\[Placeholder]", "chicken", "fish", "beef", "pork"},
+     {"pork", "1", "0", "0", "1"},
+     {"beef", "0", "0", "1", "1"},
+     {"fish", "0", "1", "1", "1"},
+     {"chicken", "1", "1", "1", "0"}
+    }], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\nThe following relations are in the set \[LessTilde] {(pork, chicken), \
+(pork, pork), (beef, beef), (beef, pork), (fish, fish), (fish, beef), (fish, \
+pork), (chicken, chicken), (chicken, fish), (chicken, beef)}.  We can see \
+that from the set {pork, beef, fish, chicken} either a \[LessTilde] b or b \
+\[LessTilde] a.\n\n2.5.5\n\n\[Tilde] is rational means \[Tilde] is complete \
+and transitive.\nThis means x \[GreaterTilde] x by completeness.  Therefore, \
+we can rule out \[Not][x \[GreaterTilde] x].  This is only possible if x \
+\[Tilde] x.\nSuppose \[Tilde] is not transitive.   This implies ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", 
+    RowBox[{"x", ",", " ", "y", ",", " ", 
+     RowBox[{"z", " ", "\[Element]", " ", "\[DoubleStruckCapitalA]"}]}]], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "x ~ y, y ~ z but \[Not](x ~ z).  This means (x > z) \[Or] (z < z).  Thus we \
+have x ~ y > z.  But we have y ~ z.  Thus we have a contratdiction.\n\n2.5.8\n\
+We saw previously the relation is complete.  However, the relation is not \
+transitive.  For example, we see \[OpenCurlyDoubleQuote]pork R chicken\
+\[CloseCurlyDoubleQuote], and \[OpenCurlyDoubleQuote]chicken R fish\
+\[CloseCurlyDoubleQuote], but no \[OpenCurlyDoubleQuote]pork R fish\
+\[CloseCurlyDoubleQuote].  Thus it cannot be an equivalence relations.\n\n\
+2.7.6\nThe equivalence relation are the set of all vectors with the same \
+length and direction.\n\n2.7.10\n\n ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"~", 
+    RowBox[{"=", 
+     RowBox[{"(", 
+      RowBox[{"\[GreaterTilde]", 
+       RowBox[{"\[Intersection]", 
+        SuperscriptBox["\[GreaterTilde]", 
+         RowBox[{"-", "1"}]]}]}], ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ?\n \n \[Succeeds]= (\[GreaterTilde]\\~) ?"
 }], "Text",
- CellChangeTimes->{{3.652976018286855*^9, 3.6529760185368905`*^9}, {
-  3.6529920066134634`*^9, 3.652992239118681*^9}, {3.652992275798979*^9, 
-  3.652992378557332*^9}, {3.6529924147264166`*^9, 3.652992578473216*^9}, {
-  3.652992622794402*^9, 3.652993154856105*^9}, {3.6529932193415813`*^9, 
-  3.6529932380408583`*^9}, {3.6529933066682024`*^9, 3.6529933676875114`*^9}}]
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQAWIQ/VrXc1O9+WtHU71AMF238HJDO5C2OfN4LpieWLkI
+RK+6GrgeRJ+zu74ZRE9T8T8Bovdl3zwLos1SowU6QOrfZUmA6G1+B6VA9KvE
+UGUQLcHwTQtEi1d72O0A2aMpEw2iu7xr8kB0+oKIaSC6Ruyp6k4g3RJupQ2i
+BSZll4BoN7E3FSDaI1h6H4hm2nj5MIiuqpR+AKIlT8k9AdFakdPfgvUf4/wP
+ok/sExfeBaTfGR1UA9EKEgy6IPrOn0l6IHru9bfGIPrryhxrEH3p82lHEC3p
+PNETROfI+0eD6NDMV1kgOmZVRCGIjrQ9C6YBNIedbQ==
+  "]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3197,8 +3240,8 @@ Cell[BoxData[
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1424, 901},
-WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+WindowSize->{1920, 997},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 TaggingRules->{"$testsRun" -> False},
 FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
 StyleDefinitions->"Default.nb"
@@ -3214,13 +3257,13 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 128, 1, 92, "Section"],
+Cell[558, 20, 128, 1, 81, "Section"],
 Cell[CellGroupData[{
-Cell[711, 25, 97, 1, 56, "Section"],
+Cell[711, 25, 97, 1, 49, "Section"],
 Cell[811, 28, 5937, 167, 299, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6785, 200, 99, 1, 70, "Section"],
+Cell[6785, 200, 99, 1, 63, "Section"],
 Cell[6887, 203, 1857, 66, 153, "Text"],
 Cell[CellGroupData[{
 Cell[8769, 273, 1123, 33, 112, "Input"],
@@ -3233,91 +3276,91 @@ Cell[11010, 347, 456, 14, 48, "Output"]
 Cell[11481, 364, 375, 5, 30, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11893, 374, 95, 1, 70, "Section"],
-Cell[11991, 377, 2800, 64, 679, "Text"]
+Cell[11893, 374, 95, 1, 63, "Section"],
+Cell[11991, 377, 4854, 107, 1201, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14828, 446, 99, 1, 70, "Section"],
-Cell[14930, 449, 17008, 451, 2493, "Text"]
+Cell[16882, 489, 99, 1, 63, "Section"],
+Cell[16984, 492, 17008, 451, 2493, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[31975, 905, 99, 1, 70, "Section"],
-Cell[32077, 908, 549, 9, 49, "Text"]
+Cell[34029, 948, 99, 1, 63, "Section"],
+Cell[34131, 951, 549, 9, 49, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[32663, 922, 97, 1, 70, "Section"],
-Cell[32763, 925, 1272, 29, 72, "Text"]
+Cell[34717, 965, 97, 1, 63, "Section"],
+Cell[34817, 968, 1272, 29, 72, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34072, 959, 97, 1, 70, "Section"],
-Cell[34172, 962, 1113, 35, 76, "Text"]
+Cell[36126, 1002, 97, 1, 63, "Section"],
+Cell[36226, 1005, 1113, 35, 76, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35322, 1002, 108, 1, 70, "Section"],
+Cell[37376, 1045, 108, 1, 63, "Section"],
 Cell[CellGroupData[{
-Cell[35455, 1007, 3417, 87, 292, "Input"],
-Cell[38875, 1096, 1612, 32, 177, "Output"],
-Cell[40490, 1130, 26898, 481, 404, "Output"],
-Cell[67391, 1613, 1615, 32, 177, "Output"],
-Cell[69009, 1647, 7862, 134, 411, "Output"]
+Cell[37509, 1050, 3417, 87, 292, "Input"],
+Cell[40929, 1139, 1612, 32, 177, "Output"],
+Cell[42544, 1173, 26898, 481, 404, "Output"],
+Cell[69445, 1656, 1615, 32, 177, "Output"],
+Cell[71063, 1690, 7862, 134, 411, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[76920, 1787, 107, 1, 70, "Section"],
+Cell[78974, 1830, 107, 1, 70, "Section"],
 Cell[CellGroupData[{
-Cell[77052, 1792, 947, 23, 72, "Input"],
-Cell[78002, 1817, 668, 16, 31, "Output"],
-Cell[78673, 1835, 1194, 25, 108, "Output"],
-Cell[79870, 1862, 7166, 130, 270, "Output"]
+Cell[79106, 1835, 947, 23, 72, "Input"],
+Cell[80056, 1860, 668, 16, 31, "Output"],
+Cell[80727, 1878, 1194, 25, 108, "Output"],
+Cell[81924, 1905, 7166, 130, 270, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[87073, 1997, 2410, 54, 272, "Input"],
-Cell[89486, 2053, 567, 9, 31, "Output"],
-Cell[90056, 2064, 565, 9, 31, "Output"]
+Cell[89127, 2040, 2410, 54, 272, "Input"],
+Cell[91540, 2096, 567, 9, 31, "Output"],
+Cell[92110, 2107, 565, 9, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[90658, 2078, 1729, 43, 172, "Input"],
-Cell[92390, 2123, 479, 9, 31, "Output"],
-Cell[92872, 2134, 8362, 150, 229, "Output"]
+Cell[92712, 2121, 1729, 43, 172, "Input"],
+Cell[94444, 2166, 479, 9, 31, "Output"],
+Cell[94926, 2177, 8362, 150, 229, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[101271, 2289, 1790, 44, 152, "Input"],
-Cell[103064, 2335, 268, 5, 31, "Output"],
-Cell[103335, 2342, 3643, 67, 255, "Output"]
+Cell[103325, 2332, 1790, 44, 152, "Input"],
+Cell[105118, 2378, 268, 5, 31, "Output"],
+Cell[105389, 2385, 3643, 67, 255, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[107027, 2415, 109, 1, 63, "Section"],
+Cell[109081, 2458, 109, 1, 63, "Section"],
 Cell[CellGroupData[{
-Cell[107161, 2420, 1110, 27, 72, "Input"],
-Cell[108274, 2449, 6282, 114, 385, "Output"],
-Cell[114559, 2565, 9363, 195, 75, "Output"],
-Cell[123925, 2762, 1804, 40, 123, "Output"]
+Cell[109215, 2463, 1110, 27, 72, "Input"],
+Cell[110328, 2492, 6282, 114, 385, "Output"],
+Cell[116613, 2608, 9363, 195, 75, "Output"],
+Cell[125979, 2805, 1804, 40, 123, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[125766, 2807, 248, 5, 31, "Input"],
-Cell[126017, 2814, 5535, 89, 201, "Output"]
+Cell[127820, 2850, 248, 5, 31, "Input"],
+Cell[128071, 2857, 5535, 89, 201, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[131589, 2908, 165, 3, 31, "Input"],
-Cell[131757, 2913, 329, 6, 30, "Output"]
+Cell[133643, 2951, 165, 3, 31, "Input"],
+Cell[133811, 2956, 329, 6, 30, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[132123, 2924, 126, 2, 40, "Input"],
-Cell[132252, 2928, 569, 19, 40, "Output"]
+Cell[134177, 2967, 126, 2, 40, "Input"],
+Cell[134306, 2971, 569, 19, 40, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[132858, 2952, 264, 6, 40, "Input"],
-Cell[133125, 2960, 1024, 27, 273, "Output"]
+Cell[134912, 2995, 264, 6, 40, "Input"],
+Cell[135179, 3003, 1024, 27, 273, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[134198, 2993, 109, 1, 65, "Section"],
+Cell[136252, 3036, 109, 1, 65, "Section"],
 Cell[CellGroupData[{
-Cell[134332, 2998, 1294, 26, 81, "Input"],
-Cell[135629, 3026, 944, 21, 40, "Output"],
-Cell[136576, 3049, 6486, 116, 299, "Output"],
-Cell[143065, 3167, 1048, 28, 110, "Output"]
+Cell[136386, 3041, 1294, 26, 81, "Input"],
+Cell[137683, 3069, 944, 21, 40, "Output"],
+Cell[138630, 3092, 6486, 116, 299, "Output"],
+Cell[145119, 3210, 1048, 28, 110, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
