@@ -1,0 +1,1122 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     30363,       1113]
+NotebookOptionsPosition[     28918,       1058]
+NotebookOutlinePosition[     29263,       1073]
+CellTagsIndexPosition[     29220,       1070]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Homework 7", "Title",
+ CellChangeTimes->{{3.6542710807989798`*^9, 3.654271094729965*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 1", "Section",
+ CellChangeTimes->{{3.654271098249465*^9, 3.65427109967948*^9}}],
+
+Cell[TextData[{
+ "Y = A(Y) + T\nT = T(Q, Y, Y*)\ndY = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     RowBox[{
+      SubscriptBox["T", "Q"], "dQ"}], " ", "+", " ", 
+     RowBox[{
+      SuperscriptBox["T", "*"], 
+      SuperscriptBox["dY", "*"]}]}], 
+    RowBox[{
+     SubscriptBox["a", "y"], "+", 
+     SubscriptBox["T", "Y"], "-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\ndT = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["a", "Y"], "-", "1"}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["T", "Q"], "dQ"}], " ", "+", " ", 
+       RowBox[{
+        SuperscriptBox["T", "*"], 
+        SuperscriptBox["dY", "*"]}]}], ")"}]}], 
+    RowBox[{
+     SubscriptBox["a", "Y"], "+", 
+     SubscriptBox["T", "Y"], "-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.6542711046493206`*^9, 3.654271127738789*^9}, {
+  3.654272082445256*^9, 3.6542721831129646`*^9}, {3.654272221580863*^9, 
+  3.6542722681137*^9}, {3.6542726648565474`*^9, 3.6542726914799824`*^9}, {
+  3.6542727437195234`*^9, 3.6542727517832203`*^9}, {3.654272913124606*^9, 
+  3.6542729139141674`*^9}, {3.654272948773778*^9, 3.6542729557227135`*^9}, {
+  3.65427304616131*^9, 3.6542730677952056`*^9}, {3.654273158506712*^9, 
+  3.6542732159635086`*^9}, {3.654273272721196*^9, 3.6542732813393154`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"demand", " ", "=", " ", 
+  RowBox[{"y", " ", "\[Equal]", " ", 
+   RowBox[{
+    RowBox[{"a", "[", "y", "]"}], " ", "+", " ", 
+    RowBox[{"t", "[", 
+     RowBox[{"q", ",", " ", "y", ",", " ", "yStar"}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"tb", "  ", "=", " ", 
+  RowBox[{"t", " ", "\[Equal]", " ", 
+   RowBox[{"t", "[", 
+    RowBox[{"q", ",", " ", "y", ",", " ", "yStar"}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"notationRules", "  ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Dt", "[", "y", "]"}], " ", "->", " ", "dY"}], ",", " ", 
+     RowBox[{
+      RowBox[{"a", "[", "y", "]"}], " ", "->", " ", 
+      SubscriptBox["a", "y"]}], ",", " ", 
+     RowBox[{
+      RowBox[{"Dt", "[", "yStar", "]"}], "\[Rule]", " ", "dYStar"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["t", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"0", ",", "0", ",", "1"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"q", ",", "y", ",", "yStar"}], "]"}], "\[Rule]", 
+      SubscriptBox["T", "Ystar"]}], ",", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["t", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"0", ",", "1", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"q", ",", "y", ",", "yStar"}], "]"}], "\[Rule]", 
+      SubscriptBox["T", "y"]}], ",", " ", 
+     RowBox[{
+      RowBox[{"Dt", "[", "q", "]"}], "\[Rule]", " ", "dQ"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["t", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"1", ",", "0", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"q", ",", "y", ",", "yStar"}], "]"}], "\[Rule]", 
+      SubscriptBox["T", "Q"]}], ",", " ", 
+     RowBox[{
+      RowBox[{"Dt", "[", "t", "]"}], "\[Rule]", "dT"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Dt", "[", "demand", "]"}], "/.", "notationRules"}], " ", "//", 
+  "TraditionalForm"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Dt", "[", "tb", "]"}], "/.", "notationRules"}], "//", 
+  "TraditionalForm"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Dt", "[", "demand", "]"}], "&&", " ", 
+      RowBox[{"Dt", "[", "tb", "]"}]}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Dt", "[", "y", "]"}], ",", " ", 
+       RowBox[{"Dt", "[", "t", "]"}]}], "}"}]}], "]"}], "/.", 
+   "notationRules"}], " ", "//", "TraditionalForm"}]}], "Input",
+ CellChangeTimes->{{3.6542711696641426`*^9, 3.654271434204414*^9}, {
+  3.6542715033575234`*^9, 3.6542717296479416`*^9}, {3.6542717956827927`*^9, 
+  3.6542718050784626`*^9}, {3.654271874299506*^9, 3.6542720690674095`*^9}, {
+  3.654276358916031*^9, 3.6542763666004877`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"y", "\[Equal]", 
+  RowBox[{
+   RowBox[{"a", "[", "y", "]"}], "+", 
+   RowBox[{"t", "[", 
+    RowBox[{"q", ",", "y", ",", "yStar"}], "]"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.6542713027296553`*^9, {3.654271638460424*^9, 3.654271730762705*^9}, 
+   3.654271805459736*^9, {3.6542720308107624`*^9, 3.6542720694206514`*^9}, 
+   3.654276369918722*^9}],
+
+Cell[BoxData[
+ RowBox[{"t", "\[Equal]", 
+  RowBox[{"t", "[", 
+   RowBox[{"q", ",", "y", ",", "yStar"}], "]"}]}]], "Output",
+ CellChangeTimes->{
+  3.6542713027296553`*^9, {3.654271638460424*^9, 3.654271730762705*^9}, 
+   3.654271805459736*^9, {3.6542720308107624`*^9, 3.6542720694206514`*^9}, 
+   3.654276369921725*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"dY", "\[LongEqual]", 
+   RowBox[{
+    RowBox[{"dY", " ", 
+     RowBox[{
+      SuperscriptBox["a", "\[Prime]",
+       MultilineFunction->None], "(", "y", ")"}]}], "+", 
+    RowBox[{"dQ", " ", 
+     SubscriptBox["T", "Q"]}], "+", 
+    RowBox[{"dY", " ", 
+     SubscriptBox["T", "y"]}], "+", 
+    RowBox[{"dYStar", " ", 
+     SubscriptBox["T", "Ystar"]}]}]}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.6542713027296553`*^9, {3.654271638460424*^9, 3.654271730762705*^9}, 
+   3.654271805459736*^9, {3.6542720308107624`*^9, 3.6542720694206514`*^9}, 
+   3.6542763699357347`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"dT", "\[LongEqual]", 
+   RowBox[{
+    RowBox[{"dQ", " ", 
+     SubscriptBox["T", "Q"]}], "+", 
+    RowBox[{"dY", " ", 
+     SubscriptBox["T", "y"]}], "+", 
+    RowBox[{"dYStar", " ", 
+     SubscriptBox["T", "Ystar"]}]}]}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.6542713027296553`*^9, {3.654271638460424*^9, 3.654271730762705*^9}, 
+   3.654271805459736*^9, {3.6542720308107624`*^9, 3.6542720694206514`*^9}, 
+   3.654276369938736*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"dY", "\[Rule]", 
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"dQ", " ", 
+          SubscriptBox["T", "Q"]}], "+", 
+         RowBox[{"dYStar", " ", 
+          SubscriptBox["T", "Ystar"]}]}], 
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["a", "\[Prime]",
+           MultilineFunction->None], "(", "y", ")"}], "+", 
+         SubscriptBox["T", "y"], "-", "1"}]]}]}], ",", 
+     RowBox[{"dT", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["a", "\[Prime]",
+            MultilineFunction->None], "(", "y", ")"}], "-", "1"}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"dQ", " ", 
+           SubscriptBox["T", "Q"]}], "+", 
+          RowBox[{"dYStar", " ", 
+           SubscriptBox["T", "Ystar"]}]}], ")"}]}], 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["a", "\[Prime]",
+          MultilineFunction->None], "(", "y", ")"}], "+", 
+        SubscriptBox["T", "y"], "-", "1"}]]}]}], "}"}], "}"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.6542713027296553`*^9, {3.654271638460424*^9, 3.654271730762705*^9}, 
+   3.654271805459736*^9, {3.6542720308107624`*^9, 3.6542720694206514`*^9}, 
+   3.6542763699727635`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 2", "Section",
+ CellChangeTimes->{{3.65427330636858*^9, 3.654273309298663*^9}}],
+
+Cell[TextData[{
+ "\[ScriptCapitalL] = \[Sqrt]xy + \[Lambda] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["p", "x"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " x + ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["p", "y"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "y - 100)\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[PartialD]", "\[ScriptCapitalL]"}], 
+    RowBox[{"\[PartialD]", "x"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["y", 
+    RowBox[{"2", 
+     RowBox[{"\[Sqrt]", "x"}]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + \[Lambda] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["p", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 0\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[PartialD]", "\[ScriptCapitalL]"}], 
+    RowBox[{"\[PartialD]", "x"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["x", 
+    RowBox[{"2", 
+     RowBox[{"\[Sqrt]", "y"}]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + \[Lambda] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["p", "y"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 0\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[PartialD]", "\[ScriptCapitalL]"}], 
+    RowBox[{"\[PartialD]", "\[Lambda]"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["p", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " x + ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["p", "y"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " y - 100 = 0\n\n\[Lambda] = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["x", 
+    RowBox[{
+     RowBox[{"-", "2"}], " ", 
+     SubscriptBox["p", "Y"], " ", 
+     RowBox[{"\[Sqrt]", "y"}]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"x", "\[Equal]", 
+    FractionBox["50", "px"]}], ",", 
+   RowBox[{"y", "\[Equal]", 
+    FractionBox["50", "py"]}], ",", 
+   RowBox[{"\[Lambda]", "\[Equal]", 
+    FractionBox["50", 
+     RowBox[{"px", " ", "py"}]]}]}]],
+  CellChangeTimes->{
+   3.652760466162701*^9, {3.652760515440097*^9, 3.6527605573655643`*^9}, 
+    3.652991314111064*^9}],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Epsilon]", 
+    RowBox[{"x", ",", 
+     SubscriptBox["p", "x"]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"-", "50"}], "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Epsilon]", 
+    RowBox[{"y", ",", " ", 
+     SubscriptBox["p", "y"]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["50", "y"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Epsilon]", 
+    RowBox[{"x", ",", 
+     SubscriptBox["p", "y"]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 0, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Epsilon]", 
+    RowBox[{"y", ",", " ", 
+     SubscriptBox["p", "x"]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 0 \[LineSeparator]"
+}], "Text",
+ CellChangeTimes->{{3.654273662171471*^9, 3.6542738748684287`*^9}, {
+  3.6542739094675837`*^9, 3.654273909606923*^9}, {3.6542742387550926`*^9, 
+  3.6542745437967353`*^9}, {3.654274597621708*^9, 3.6542746570944176`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 3", "Section",
+ CellChangeTimes->{{3.654274673542472*^9, 3.654274675261693*^9}}],
+
+Cell[TextData[{
+ "Assume that R is transitive.\nAssume that R is asymmetric.\nAssume that R \
+is cyclic.\n\tFor some k > 1, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " R ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " R ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "3"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ",... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    RowBox[{"k", "-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "R ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    RowBox[{"k", "-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[And] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "k"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " R ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (a cycle of length k)\nBut from transitivity we have:\n\t",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    RowBox[{"k", "-", "2"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " R ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    RowBox[{"k", "-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[And] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    RowBox[{"k", "-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " R ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "k"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Implies] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    RowBox[{"k", "-", "2"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " R ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "k"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "k"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\[Therefore] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "R ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "k"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nBy asymmetry: ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " R ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "k"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[Implies] \[Not]",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "k"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "R ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nbut then contradiction!\n\[Therefore] Either R is not cyclic or R is \
+instransitive."
+}], "Text",
+ CellChangeTimes->{{3.6542746887908*^9, 3.6542748626585894`*^9}, {
+  3.65427496338745*^9, 3.6542750569095535`*^9}, {3.6542751029087677`*^9, 
+  3.654275208965977*^9}, {3.654275240135717*^9, 3.6542753621073627`*^9}, {
+  3.6542754005371294`*^9, 3.654275404188746*^9}, {3.654275437512412*^9, 
+  3.654275448045865*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 4", "Section",
+ CellChangeTimes->{{3.6542755405895166`*^9, 3.6542755576285877`*^9}}],
+
+Cell["come back to me", "Text",
+ CellChangeTimes->{{3.654275560668747*^9, 3.6542755637783365`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 5", "Section",
+ CellChangeTimes->{{3.6542755735382195`*^9, 3.6542755776291485`*^9}}],
+
+Cell[TextData[{
+ "It is not complete.  Consider ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") = (10, 11) and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["y", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") = (11, 10).  This is not in \[GreaterTilde] \[SubsetEqual] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalR]", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".\n\n\[GreaterTilde] is transitive.  Consider the case  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") R ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["y", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") R ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["z", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["z", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "). We can rewrite this as: (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[GreaterEqual] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[And] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[GreaterEqual] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["z", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ")  \[And] (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[GreaterEqual] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[And] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[GreaterEqual] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["z", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ").  Since all x\[CloseCurlyQuote]s, y\[CloseCurlyQuote]s, and z\
+\[CloseCurlyQuote]s are all real numbers, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[GreaterEqual] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["z", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[GreaterEqual] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["z", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".  Therefore ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") R ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["z", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["z", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ").\n\nThe asymmetric subrelation  ",
+ StyleBox[">",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ " is irreflexive. Consider the case ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") ",
+ StyleBox[">",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["y", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ").  This means ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".  Since all x\[CloseCurlyQuote]s and y\[CloseCurlyQuote]s are real \
+numbers, then (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") \[And] (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") \[Implies]  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Not]", 
+    RowBox[{"[", 
+     SubscriptBox["x", "1"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "] \[And] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Not]", 
+    RowBox[{"[", 
+     SubscriptBox["y", "1"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "] .  Therefore ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") ",
+ StyleBox[">",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["y", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") \[Implies] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["y", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") ",
+ StyleBox["\[NotEqual]",
+  FontWeight->"Bold"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ").\n\nThe asymmetric subrelation  ",
+ StyleBox[">",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ " is asymmetric. Consider the case ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") ",
+ StyleBox[">",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["y", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ").  This means ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".  Since all x\[CloseCurlyQuote]s and y\[CloseCurlyQuote]s are real \
+numbers, then (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") \[And] (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") \[Implies]  \[Not][(",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") \[And] (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ")].  Therefore ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") ",
+ StyleBox[">",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["y", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") \[Implies] \[Not] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["y", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") ",
+ StyleBox[">",
+  FontWeight->"Bold"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ").\n\nThe asymmetric subrelation is also acyclical (by transitivity)."
+}], "Text",
+ CellChangeTimes->{{3.654275725845089*^9, 3.654275813911413*^9}, {
+   3.6542758506714993`*^9, 3.654275931871624*^9}, {3.654275997988349*^9, 
+   3.65427601746975*^9}, {3.654276086653002*^9, 3.654276111455613*^9}, {
+   3.654276174913458*^9, 3.6542762130755606`*^9}, {3.654276269523994*^9, 
+   3.6542763197882137`*^9}, {3.6542764001765366`*^9, 3.654276498239826*^9}, {
+   3.654276550153388*^9, 3.654276585387816*^9}, {3.6542768581642027`*^9, 
+   3.6542769544725666`*^9}, {3.654276992604739*^9, 3.654277061585761*^9}, {
+   3.6542771512363467`*^9, 3.6542772530555825`*^9}, {3.6542773422309046`*^9, 
+   3.654277372922694*^9}, {3.6542774457915792`*^9, 3.6542774541610737`*^9}, 
+   3.6542794318660126`*^9, {3.654279471192113*^9, 3.6542794712731996`*^9}, {
+   3.654279507546419*^9, 3.654279782456235*^9}, {3.65427981790641*^9, 
+   3.6542800395027905`*^9}, {3.654280070161191*^9, 3.6542800834984922`*^9}, {
+   3.6542801328847117`*^9, 3.6542802751895237`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 6", "Section",
+ CellChangeTimes->{{3.654280328885558*^9, 3.6542803313763266`*^9}}],
+
+Cell["Test", "Text",
+ CellChangeTimes->{{3.654280333996187*^9, 3.6542803404353466`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 7", "Section",
+ CellChangeTimes->{{3.6542803434254656`*^9, 3.654280346354547*^9}}],
+
+Cell[TextData[{
+ "A topological space is a set ",
+ StyleBox["X",
+  FontWeight->"Bold"],
+ " along with a collection of subsets ",
+ StyleBox["T",
+  FontWeight->"Bold"],
+ " of ",
+ StyleBox["X ",
+  FontWeight->"Bold"],
+ "(called the open subsets of ",
+ StyleBox["X",
+  FontWeight->"Bold"],
+ ") which satisfies the following condtions\n1. The empty set is in ",
+ StyleBox["T.\n",
+  FontWeight->"Bold"],
+ "2. ",
+ StyleBox["X",
+  FontWeight->"Bold"],
+ " is in ",
+ StyleBox["T",
+  FontWeight->"Bold"],
+ ".\n3. Pairwise intersection of sets in ",
+ StyleBox["T",
+  FontWeight->"Bold"],
+ " is also in ",
+ StyleBox["T",
+  FontWeight->"Bold"],
+ ".\n4. The aribitrary union of sets in ",
+ StyleBox["T ",
+  FontWeight->"Bold"],
+ "are also in ",
+ StyleBox["T",
+  FontWeight->"Bold"],
+ ".\n\nAn algebra is a set ",
+ StyleBox["X",
+  FontWeight->"Bold"],
+ " along with a collection of subsets of  "
+}], "Text",
+ CellChangeTimes->{{3.6542803501952724`*^9, 3.654280350684622*^9}, {
+  3.654281435922104*^9, 3.654281443460865*^9}, {3.654281473500678*^9, 
+  3.6542816856569815`*^9}, {3.6542817393762474`*^9, 3.6542817776463976`*^9}, {
+  3.6542820113853602`*^9, 3.6542820950047293`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 8", "Section",
+ CellChangeTimes->{{3.654280356914321*^9, 3.6542803595151873`*^9}}],
+
+Cell["Test", "Text",
+ CellChangeTimes->{{3.654280368204674*^9, 3.654280368725067*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{759, 793},
+WindowMargins->{{Automatic, 332}, {24, Automatic}},
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 95, 1, 101, "Title"],
+Cell[CellGroupData[{
+Cell[700, 27, 94, 1, 70, "Section"],
+Cell[797, 30, 1441, 41, 125, "Text"],
+Cell[CellGroupData[{
+Cell[2263, 75, 2924, 82, 198, "Input"],
+Cell[5190, 159, 372, 9, 31, "Output"],
+Cell[5565, 170, 318, 7, 31, "Output"],
+Cell[5886, 179, 617, 17, 47, "Output"],
+Cell[6506, 198, 481, 13, 47, "Output"],
+Cell[6990, 213, 1370, 41, 72, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8409, 260, 94, 1, 70, "Section"],
+Cell[8506, 263, 3530, 132, 294, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12073, 400, 95, 1, 70, "Section"],
+Cell[12171, 403, 3197, 120, 201, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15405, 528, 99, 1, 70, "Section"],
+Cell[15507, 531, 99, 1, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15643, 537, 99, 1, 70, "Section"],
+Cell[15745, 540, 11398, 446, 298, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27180, 991, 97, 1, 70, "Section"],
+Cell[27280, 994, 88, 1, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27405, 1000, 97, 1, 70, "Section"],
+Cell[27505, 1003, 1162, 42, 163, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28704, 1050, 97, 1, 70, "Section"],
+Cell[28804, 1053, 86, 1, 30, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
