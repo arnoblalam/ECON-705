@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     30363,       1113]
-NotebookOptionsPosition[     28918,       1058]
-NotebookOutlinePosition[     29263,       1073]
-CellTagsIndexPosition[     29220,       1070]
+NotebookDataLength[     58697,       1990]
+NotebookOptionsPosition[     55839,       1890]
+NotebookOutlinePosition[     56335,       1910]
+CellTagsIndexPosition[     56292,       1907]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -529,8 +529,96 @@ Cell[CellGroupData[{
 Cell["Exercise 4", "Section",
  CellChangeTimes->{{3.6542755405895166`*^9, 3.6542755576285877`*^9}}],
 
-Cell["come back to me", "Text",
- CellChangeTimes->{{3.654275560668747*^9, 3.6542755637783365`*^9}}]
+Cell[TextData[{
+ "By definition P is antisyemmtric.  Thus, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " P ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Implies] \[Not] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " P ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Or] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". Kreps says ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[NotEqual] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".  \[Therefore] it must be the case that \[Not]",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " P ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".\nCarter (2001) definition says that if ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is \[OpenCurlyDoubleQuote]chained to\[CloseCurlyDoubleQuote] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " by the asymmetric component, then it must be the case that ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is (directly) related to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (for the whole relation R, not the antisymmetric relation P).  This \
+implies ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[Tilde] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (because R = P + \[Tilde])."
+}], "Text",
+ CellChangeTimes->{{3.654275560668747*^9, 3.6542755637783365`*^9}, {
+  3.654358794582328*^9, 3.6543588015705724`*^9}, {3.654358849078903*^9, 
+  3.654358849673316*^9}, {3.654358881358906*^9, 3.6543589554690666`*^9}, {
+  3.6543590047462387`*^9, 3.654359058485962*^9}, {3.6543591183779864`*^9, 
+  3.6543592230752783`*^9}, {3.654359253524194*^9, 3.654359421912842*^9}, {
+  3.6543594533155775`*^9, 3.6543594844046025`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -992,8 +1080,117 @@ Cell[CellGroupData[{
 Cell["Exercise 6", "Section",
  CellChangeTimes->{{3.654280328885558*^9, 3.6542803313763266`*^9}}],
 
-Cell["Test", "Text",
- CellChangeTimes->{{3.654280333996187*^9, 3.6542803404353466`*^9}}]
+Cell[TextData[{
+ "If a relation is reflexive, then it has diagonals equal to 1. When the \
+matrix ",
+ StyleBox["R",
+  FontWeight->"Bold"],
+ " is raised to the first power, we have the case i = j \[Implies] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["r", 
+    RowBox[{"i", ",", " ", "j"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 1.  For the squared matrix the ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["r", 
+    RowBox[{"i", ",", " ", "j"}], "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " element is given by ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["r", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[CenterDot] ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["r", "j", "T"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " where ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["r", "i"], TraditionalForm]]],
+ " is the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["i", "th"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " row of the original matrix and ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["r", "j", "T"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is the (transpose of the) ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["j", "th"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " column (and \[CenterDot] is the dot product).  Thus, we can see that if \
+xRy and yRz in the original relationship, than ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["xR", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "z in the new relationship (and so on for larger relationships).  By the \
+time the matrix is raised to the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["N", "th"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " power, we will have the case that ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " R ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[And] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " R ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "3"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[And] ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    RowBox[{"N", "-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " R ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "N"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Implies] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["R", "N"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "N"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.654280333996187*^9, 3.6542803404353466`*^9}, {
+  3.6543599218550773`*^9, 3.6543599382928624`*^9}, {3.654359980023851*^9, 
+  3.6543599825626807`*^9}, {3.654360146410979*^9, 3.6543601486615815`*^9}, {
+  3.6543601806092443`*^9, 3.654360491917354*^9}, {3.654360525226612*^9, 
+  3.6543607555577564`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1002,48 +1199,101 @@ Cell["Exercise 7", "Section",
  CellChangeTimes->{{3.6542803434254656`*^9, 3.654280346354547*^9}}],
 
 Cell[TextData[{
- "A topological space is a set ",
- StyleBox["X",
+ "A topological space (X, T) is a set X along with a collection of subsets T \
+of X",
+ StyleBox[" ",
   FontWeight->"Bold"],
- " along with a collection of subsets ",
- StyleBox["T",
+ "(called the open subsets of X) which satisfies the following condtions\n1. \
+\[Null]\[EmptySet] \[Element]",
+ StyleBox[" ",
   FontWeight->"Bold"],
- " of ",
- StyleBox["X ",
+ "T",
+ StyleBox[" ",
   FontWeight->"Bold"],
- "(called the open subsets of ",
- StyleBox["X",
+ "\[And] X \[Element] T.\n3. ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] T \[Implies] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Intersection] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] T\n4. ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", "\[Alpha]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] I, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "\[Alpha]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] T \[Implies] ",
+ Cell[BoxData[
+  FormBox[
+   UnderscriptBox["\[Union]", 
+    RowBox[{"a", "\[Element]", "I"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "\[Alpha]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] T\n\nAn algebra is a set X along with a collection of subsets \
+of  \[CapitalSigma] of X such that;\n1. X \[Element] \[CapitalSigma].\n2. A \
+\[Element] \[CapitalSigma] \[Implies] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["A", "C"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] \[CapitalSigma]\n3. If ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    SubscriptBox["A", "n"],
+    FontWeight->"Plain"], TraditionalForm]],
+  FormatType->"TraditionalForm",
   FontWeight->"Bold"],
- ") which satisfies the following condtions\n1. The empty set is in ",
- StyleBox["T.\n",
+ " is a sequence of elements of \[CapitalSigma], then ",
+ Cell[BoxData[
+  FormBox[
+   UnderoverscriptBox["\[Union]", 
+    RowBox[{"n", "=", "1"}], "N"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    SubscriptBox["A", "n"],
+    FontWeight->"Plain"], TraditionalForm]],
+  FormatType->"TraditionalForm",
   FontWeight->"Bold"],
- "2. ",
- StyleBox["X",
-  FontWeight->"Bold"],
- " is in ",
- StyleBox["T",
-  FontWeight->"Bold"],
- ".\n3. Pairwise intersection of sets in ",
- StyleBox["T",
-  FontWeight->"Bold"],
- " is also in ",
- StyleBox["T",
-  FontWeight->"Bold"],
- ".\n4. The aribitrary union of sets in ",
- StyleBox["T ",
-  FontWeight->"Bold"],
- "are also in ",
- StyleBox["T",
-  FontWeight->"Bold"],
- ".\n\nAn algebra is a set ",
- StyleBox["X",
-  FontWeight->"Bold"],
- " along with a collection of subsets of  "
+ " \[Element] \[CapitalSigma]\n\nThe topological space is closed under \
+arbitrary union, while an algebra is closed under countable union."
 }], "Text",
  CellChangeTimes->{{3.6542803501952724`*^9, 3.654280350684622*^9}, {
   3.654281435922104*^9, 3.654281443460865*^9}, {3.654281473500678*^9, 
   3.6542816856569815`*^9}, {3.6542817393762474`*^9, 3.6542817776463976`*^9}, {
-  3.6542820113853602`*^9, 3.6542820950047293`*^9}}]
+  3.6542820113853602`*^9, 3.6542821577637763`*^9}, {3.654301569452543*^9, 
+  3.654301613815572*^9}, {3.654301689549364*^9, 3.6543017907991257`*^9}, {
+  3.654301830909632*^9, 3.6543019357650113`*^9}, {3.6543023629785767`*^9, 
+  3.654302462311468*^9}, {3.654302616300776*^9, 3.6543026370595465`*^9}, {
+  3.6543028507614417`*^9, 3.6543029344718585`*^9}, {3.6543029735894847`*^9, 
+  3.6543030917308626`*^9}, {3.654303196490327*^9, 3.654303256188753*^9}, {
+  3.6543033474970512`*^9, 3.6543033482373595`*^9}, {3.654303405540546*^9, 
+  3.6543034064611707`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1051,13 +1301,600 @@ Cell[CellGroupData[{
 Cell["Exercise 8", "Section",
  CellChangeTimes->{{3.654280356914321*^9, 3.6542803595151873`*^9}}],
 
-Cell["Test", "Text",
- CellChangeTimes->{{3.654280368204674*^9, 3.654280368725067*^9}}]
+Cell[TextData[{
+ "1. T is (by definition of topology) a collection of open sets of X. By \
+definition, \[EmptySet] and X are in T.  Therefore, they must be open.  \
+However, ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["X", "c"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is \[EmptySet] and ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[EmptySet]", "C"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = X.  Therefore these must also be open.\n\n2. A closed set ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["A", "C"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is the open open set A.  The complement of this set ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["A", "C"], ")"}], "C"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", which is A.  This is open.\n\n3. Consider the two closed sets ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["A", "c"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["B", "C"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".  There union is ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["A", "C"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[Union] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["B", "C"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".  By Demorgan\[CloseCurlyQuote]s Law this is  ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["A", "C"], ")"}], "C"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[Intersection] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["B", "C"], ")"}], "C"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " which is A \[Intersection] B.  By previous A, B are open.  Therefore A \
+\[Intersection] B must be in T (by definition of topology).  Thus the union \
+of closed sets is in T.\n\n4. Again consider ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["A", "C"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["B", "C"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SuperscriptBox["A", "C"], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[Intersection]",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SuperscriptBox["B", "C"], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "  may be rewritten as A \[Union] B.  By previous A, B are open.  Therefore \
+A \[Union] B must be in T (by definition of topology)"
+}], "Text",
+ CellChangeTimes->{{3.654280368204674*^9, 3.654280368725067*^9}, {
+  3.654360792252479*^9, 3.6543608995028405`*^9}, {3.654360974329288*^9, 
+  3.654360974459363*^9}, {3.654361009130505*^9, 3.654361118646806*^9}, {
+  3.6543611595379453`*^9, 3.654361282599224*^9}, {3.6543613524081936`*^9, 
+  3.654361556902941*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Computational Exercise 1", "Section",
+ CellChangeTimes->{{3.65436160787992*^9, 3.6543616138061247`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", 
+  RowBox[{"x", ",", " ", "r", ",", " ", "r2", ",", " ", "r3"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", " ", "1", ",", " ", "0"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", " ", "0", ",", " ", "0"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r2", " ", "=", " ", 
+   RowBox[{"MatrixPower", "[", 
+    RowBox[{"r", ",", " ", "2"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r3", " ", "=", " ", 
+   RowBox[{"MatrixPower", "[", 
+    RowBox[{"r", ",", " ", "3"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", "\"\<The original relationship R in matrix form\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"r", " ", "//", "MatrixForm"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  "\"\<\!\(\*SuperscriptBox[\(R\), \(2\)]\) is produced by multplying the R \
+with itself\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"r2", " ", "//", " ", "MatrixForm"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  "\"\<\!\(\*SuperscriptBox[\(R\), \(3\)]\) is produced by multplying R with \
+\!\(\*SuperscriptBox[\(R\), \(2\)]\)\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"r3", " ", "//", " ", "MatrixForm"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  "\"\<The transitive closure of R is produced by adding \
+\!\(\*SuperscriptBox[\(R\), \(2\)]\) (all the relations that can be gotten to \
+in 2 steps) with R\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rt", " ", "=", " ", 
+   RowBox[{"r", " ", "+", " ", "r2"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"rt", " ", "//", "MatrixForm"}]}], "Input",
+ CellChangeTimes->{{3.6543616167541533`*^9, 3.6543616936577816`*^9}, {
+  3.6543617797364044`*^9, 3.654361998224324*^9}, {3.654362030083353*^9, 
+  3.6543621808025513`*^9}}],
+
+Cell[BoxData["\<\"The original relationship R in matrix form\"\>"], "Print",
+ CellChangeTimes->{{3.654361977078545*^9, 3.654361999143984*^9}, {
+  3.65436214817792*^9, 3.6543621813078938`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "1", "0"},
+     {"0", "0", "1"},
+     {"1", "0", "0"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.6543616942381873`*^9, {3.6543617878720245`*^9, 3.6543618161393714`*^9}, {
+   3.6543619084592648`*^9, 3.6543619257214813`*^9}, {3.6543619725400543`*^9, 
+   3.654361999132965*^9}, {3.654362148179921*^9, 3.6543621813098803`*^9}}],
+
+Cell[BoxData["\<\"\\!\\(\\*SuperscriptBox[\\(R\\), \\(2\\)]\\) is produced by \
+multplying the R with itself\"\>"], "Print",
+ CellChangeTimes->{{3.654361977078545*^9, 3.654361999143984*^9}, {
+  3.65436214817792*^9, 3.6543621813128834`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "0", "1"},
+     {"1", "0", "0"},
+     {"0", "1", "0"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.6543616942381873`*^9, {3.6543617878720245`*^9, 3.6543618161393714`*^9}, {
+   3.6543619084592648`*^9, 3.6543619257214813`*^9}, {3.6543619725400543`*^9, 
+   3.654361999132965*^9}, {3.654362148179921*^9, 3.6543621813139024`*^9}}],
+
+Cell[BoxData["\<\"\\!\\(\\*SuperscriptBox[\\(R\\), \\(3\\)]\\) is produced by \
+multplying R with \\!\\(\\*SuperscriptBox[\\(R\\), \\(2\\)]\\)\"\>"], "Print",
+ CellChangeTimes->{{3.654361977078545*^9, 3.654361999143984*^9}, {
+  3.65436214817792*^9, 3.654362181317895*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "0"},
+     {"0", "1", "0"},
+     {"0", "0", "1"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.6543616942381873`*^9, {3.6543617878720245`*^9, 3.6543618161393714`*^9}, {
+   3.6543619084592648`*^9, 3.6543619257214813`*^9}, {3.6543619725400543`*^9, 
+   3.654361999132965*^9}, {3.654362148179921*^9, 3.6543621813199024`*^9}}],
+
+Cell[BoxData["\<\"The transitive closure of R is produced by adding \
+\\!\\(\\*SuperscriptBox[\\(R\\), \\(2\\)]\\) (all the relations that can be \
+gotten to in 2 steps) with R\"\>"], "Print",
+ CellChangeTimes->{{3.654361977078545*^9, 3.654361999143984*^9}, {
+  3.65436214817792*^9, 3.6543621813239007`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "1", "1"},
+     {"1", "0", "1"},
+     {"1", "1", "0"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.6543616942381873`*^9, {3.6543617878720245`*^9, 3.6543618161393714`*^9}, {
+   3.6543619084592648`*^9, 3.6543619257214813`*^9}, {3.6543619725400543`*^9, 
+   3.654361999132965*^9}, {3.654362148179921*^9, 3.6543621813259068`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Computational Exercise 2", "Section",
+ CellChangeTimes->{{3.654362249650028*^9, 3.6543622539000463`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"preferred", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x1_", ",", " ", "x2_"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y1_", ",", " ", "y2_"}], "}"}]}], "]"}], " ", ":=", " ", 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"x1", " ", "\[GreaterEqual]", " ", "y1"}], " ", "\[And]", " ", 
+     RowBox[{"x2", " ", "\[GreaterEqual]", " ", "y2"}]}], ",", " ", "True", 
+    ",", " ", "False"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.65436232719431*^9, 3.6543623959106526`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"preferred", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"100", ",", " ", "100"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", " ", "0"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6543623996449037`*^9, 3.6543624150389347`*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.6543624153391366`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"preferred", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"49", ",", " ", "51"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"51", ",", " ", "49"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6543624166237135`*^9, 3.6543624412769766`*^9}}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.654362442240631*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"incomes", " ", "=", " ", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "10"}], "}"}], "]"}], ",", " ", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "10"}], "}"}], "]"}]}], "}"}], ",", " ", "1000"}],
+      "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "The", " ", "maximal", " ", "elements", " ", "are", " ", "the", " ", 
+     "ones", " ", "where", " ", "x1"}], " ", "=", " ", "x2"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"symmetric", "[", 
+   RowBox[{"{", 
+    RowBox[{"x1_", ",", " ", "x2_"}], "}"}], "]"}], " ", ":=", " ", 
+  RowBox[{"x1", " ", "\[Equal]", " ", "x2"}]}]}], "Input",
+ CellChangeTimes->{{3.6543624978678064`*^9, 3.654362528786603*^9}, {
+  3.654362577753304*^9, 3.6543625864630747`*^9}, {3.654362634982931*^9, 
+  3.6543627368816223`*^9}, {3.654362797182299*^9, 3.654362805631296*^9}, {
+  3.6543639997506685`*^9, 3.654364139036419*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"symmetric", "[", 
+  RowBox[{"{", 
+   RowBox[{"1", ",", " ", "1"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6543641418952613`*^9, 3.654364148187703*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.654364148903042*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"symmetric", "[", 
+  RowBox[{"{", 
+   RowBox[{"1", ",", " ", "2"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.654364149873433*^9, 3.6543641550254297`*^9}}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.6543641554502907`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"maximal", " ", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"incomes", ",", " ", "symmetric"}], "]"}]}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "These", " ", "are", " ", "all", " ", "the", " ", "maximal", " ", 
+    "components"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Last", "[", 
+   RowBox[{"SortBy", "[", 
+    RowBox[{"maximal", ",", "First"}], "]"}], "]"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"This", " ", "is", " ", "the", " ", "best", " ", "element"}], " ", 
+   "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.6543641644661193`*^9, 3.6543643069349623`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"7", ",", "7"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "7"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "7"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "7"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "7"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "8"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "7"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "7"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "8"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "7"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "7"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "8"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "7"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "8"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "8"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "9"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6543641758912106`*^9, {3.6543642815153913`*^9, 3.6543642948564663`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"10", ",", "10"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6543641758912106`*^9, {3.6543642815153913`*^9, 3.6543642948594694`*^9}}]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{759, 793},
-WindowMargins->{{Automatic, 332}, {24, Automatic}},
+WindowSize->{1440, 877},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{612, 792}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1078,7 +1915,7 @@ Cell[CellGroupData[{
 Cell[700, 27, 94, 1, 70, "Section"],
 Cell[797, 30, 1441, 41, 125, "Text"],
 Cell[CellGroupData[{
-Cell[2263, 75, 2924, 82, 198, "Input"],
+Cell[2263, 75, 2924, 82, 135, "Input"],
 Cell[5190, 159, 372, 9, 31, "Output"],
 Cell[5565, 170, 318, 7, 31, "Output"],
 Cell[5886, 179, 617, 17, 47, "Output"],
@@ -1096,23 +1933,63 @@ Cell[12171, 403, 3197, 120, 201, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[15405, 528, 99, 1, 70, "Section"],
-Cell[15507, 531, 99, 1, 30, "Text"]
+Cell[15507, 531, 2682, 89, 68, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[15643, 537, 99, 1, 70, "Section"],
-Cell[15745, 540, 11398, 446, 298, "Text"]
+Cell[18226, 625, 99, 1, 70, "Section"],
+Cell[18328, 628, 11398, 446, 241, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27180, 991, 97, 1, 70, "Section"],
-Cell[27280, 994, 88, 1, 30, "Text"]
+Cell[29763, 1079, 97, 1, 70, "Section"],
+Cell[29863, 1082, 3197, 110, 82, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27405, 1000, 97, 1, 70, "Section"],
-Cell[27505, 1003, 1162, 42, 163, "Text"]
+Cell[33097, 1197, 97, 1, 70, "Section"],
+Cell[33197, 1200, 3242, 95, 226, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28704, 1050, 97, 1, 70, "Section"],
-Cell[28804, 1053, 86, 1, 30, "Text"]
+Cell[36476, 1300, 97, 1, 70, "Section"],
+Cell[36576, 1303, 2941, 90, 182, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39554, 1398, 110, 1, 70, "Section"],
+Cell[CellGroupData[{
+Cell[39689, 1403, 2008, 44, 281, "Input"],
+Cell[41700, 1449, 192, 2, 23, "Print"],
+Cell[41895, 1453, 868, 22, 71, "Output"],
+Cell[42766, 1477, 240, 3, 23, "Print"],
+Cell[43009, 1482, 868, 22, 71, "Output"],
+Cell[43880, 1506, 272, 3, 23, "Print"],
+Cell[44155, 1511, 868, 22, 71, "Output"],
+Cell[45026, 1535, 308, 4, 23, "Print"],
+Cell[45337, 1541, 868, 22, 71, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46254, 1569, 111, 1, 70, "Section"],
+Cell[46368, 1572, 541, 14, 31, "Input"],
+Cell[CellGroupData[{
+Cell[46934, 1590, 272, 7, 31, "Input"],
+Cell[47209, 1599, 75, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47321, 1605, 272, 7, 31, "Input"],
+Cell[47596, 1614, 74, 1, 31, "Output"]
+}, Open  ]],
+Cell[47685, 1618, 1161, 29, 92, "Input"],
+Cell[CellGroupData[{
+Cell[48871, 1651, 182, 4, 31, "Input"],
+Cell[49056, 1657, 73, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49166, 1663, 182, 4, 31, "Input"],
+Cell[49351, 1669, 76, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49464, 1675, 624, 16, 52, "Input"],
+Cell[50091, 1693, 5533, 186, 112, "Output"],
+Cell[55627, 1881, 172, 4, 31, "Output"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
