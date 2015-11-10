@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     53278,       1520]
-NotebookOptionsPosition[     47606,       1328]
-NotebookOutlinePosition[     47951,       1343]
-CellTagsIndexPosition[     47908,       1340]
+NotebookDataLength[     72320,       2183]
+NotebookOptionsPosition[     66017,       1969]
+NotebookOutlinePosition[     66360,       1984]
+CellTagsIndexPosition[     66317,       1981]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -193,23 +193,664 @@ the-sequence-of-terms-converges-to-0)"
   3.656072451309688*^9}}]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
 Cell["Exercise 6", "Section",
- CellChangeTimes->{{3.6560435839805226`*^9, 3.656043587449992*^9}}],
+ CellChangeTimes->{{3.6560435839805226`*^9, 3.656043587449992*^9}, {
+  3.6561137716599283`*^9, 3.6561137739717536`*^9}}],
+
+Cell[TextData[{
+ "Consider the series associated with the geometric distribution\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["a", "k"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = P(K=k) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"=", 
+    RowBox[{"p", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "-", "p"}], ")"}], "k"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", 0 < p < 1\nWe find the limit of the sequence as k \[Rule] \[Infinity]\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox["lim", 
+     RowBox[{"k", " ", "\[Rule]", " ", "\[Infinity]"}]], " ", 
+    SubscriptBox["a", "k"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox["lim", 
+     RowBox[{"k", " ", "\[Rule]", " ", "\[Infinity]"}]], " ", 
+    RowBox[{"p", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "-", "p"}], ")"}], "k"]}]}], TraditionalForm]]],
+ "\nSince p is a constant, we can rewrite as:\n ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox["lim", 
+     RowBox[{"k", " ", "\[Rule]", " ", "\[Infinity]"}]], " ", 
+    RowBox[{"p", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "-", "p"}], ")"}], "k"]}]}], TraditionalForm]]],
+ " = p ",
+ Cell[BoxData[
+  FormBox[
+   UnderscriptBox["lim", 
+    RowBox[{"k", " ", "\[Rule]", " ", "\[Infinity]"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "-", "p"}], ")"}], "k"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 0 (because |1-p| < 1"
+}], "Text",
+ CellChangeTimes->{{3.6561137955539093`*^9, 3.6561139018817034`*^9}, {
+  3.656113967786232*^9, 3.65611402447544*^9}, {3.6561144370845585`*^9, 
+  3.656114467923567*^9}, {3.6561145095680914`*^9, 3.656114734021539*^9}, {
+  3.656115018381071*^9, 3.6561150353990273`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell["Exercise 7", "Section",
- CellChangeTimes->{{3.6560435913587513`*^9, 3.656043594059675*^9}}],
+ CellChangeTimes->{{3.6560435913587513`*^9, 3.656043594059675*^9}, {
+  3.65611521314513*^9, 3.656115214882125*^9}}],
+
+Cell[TextData[{
+ "Consider the geometric series ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Sum]", 
+     RowBox[{"k", " ", "=", " ", "0"}], "\[Infinity]"], 
+    SuperscriptBox["x", "k"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", |x| < 1\nThis series converges to:\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Sum]", 
+     RowBox[{"k", " ", "=", " ", "0"}], "\[Infinity]"], 
+    SuperscriptBox["x", "k"]}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{"1", "-", "x"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nDifferentiating (term by term), we obtain:\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[DifferentialD]", 
+    RowBox[{"\[DifferentialD]", "x"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Sum]", 
+     RowBox[{"k", " ", "=", " ", "0"}], "\[Infinity]"], 
+    SuperscriptBox["x", "k"]}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     FractionBox["1", 
+      RowBox[{"1", "-", "x"}]]}], 
+    RowBox[{"\[DifferentialD]", "x"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Sum]", 
+     RowBox[{"k", " ", "=", " ", "0"}], "\[Infinity]"], 
+    RowBox[{"k", " ", 
+     SuperscriptBox["x", 
+      RowBox[{"k", "-", "1"}]]}]}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "-", "x"}], ")"}], "2"]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nMultiplying by x:\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Sum]", 
+     RowBox[{"k", " ", "=", " ", "0"}], "\[Infinity]"], 
+    RowBox[{"k", " ", 
+     SuperscriptBox["x", "k"]}]}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["x", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "-", "x"}], ")"}], "2"]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nNow consider the geometric series given by\nPr(X=k) = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "-", "p"}], ")"}], "k"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nThe expected value is:\n",
+ Cell[BoxData[
+  FormBox[
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"k", " ", "=", " ", "1"}], "\[Infinity]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " k ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "-", "p"}], ")"}], "k"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "p = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"p", "(", 
+     RowBox[{"1", "-", "p"}], ")"}], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", "p"}], ")"}]}], ")"}], "2"]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "= ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"p", "(", 
+     RowBox[{"1", "-", "p"}], ")"}], 
+    SuperscriptBox["p", "2"]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"1", "-", "p"}], "p"], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQAWIQvco8vanG9rVjm83eDhC9xTZ5MojusnOaBqKn6zTM
+BtHvzJmWgmimrddWgujAXddWgeirsQd2gehbIjP2gmixVd9PgGgOu/M3QXTP
+YdF7YH1rljwF0Q7Bi1+C6Lx1V8A072wJyVogXb5JWQ1Ez1sTow2ip1tdMAHR
+SUdnOIBos8JefxC9J+tRNohWMnpYDKL7jKbUgGiZVfeaQHTPX6N2EH1j36+p
+IPrEPI3ZIDplS9kcEH1Q5PZiED3fgXEdiD6Vmr8DREtZ+BwG0VdUKh+B6Kbb
+U56A6G3rFV6DzTES+AG2Rz9boA5IR9X9lgbRAC6ln1g=
+  "]]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell["Exercise 8", "Section",
  CellChangeTimes->{{3.656043596060121*^9, 3.6560435979294524`*^9}}],
 
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["Q", "t", "d"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["d", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["d", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "t"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["Q", "t", "s"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["s", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["s", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", 
+    RowBox[{"t", "-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\nIn equilbrium, supply equals demand:\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["d", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["d", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "t"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["s", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["s", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", 
+    RowBox[{"t", "-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "t"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SubscriptBox["s", "0"], "-", 
+     SubscriptBox["d", "0"], " ", "-", " ", 
+     RowBox[{
+      SubscriptBox["s", "1"], 
+      SubscriptBox["P", 
+       RowBox[{"t", "-", "1"}]]}]}], 
+    RowBox[{"-", 
+     SubscriptBox["d", "1"]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nor\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "t"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SubscriptBox["d", "0"], " ", "-", " ", 
+      SubscriptBox["s", "0"]}], 
+     SubscriptBox["d", "1"]], " ", "-", " ", 
+    RowBox[{
+     FractionBox[
+      SubscriptBox["s", "1"], 
+      SubscriptBox["d", "1"]], 
+     SubscriptBox["P", 
+      RowBox[{"t", "-", "1"}]]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "ss"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{"1", "+", 
+     FractionBox[
+      SubscriptBox["s", "1"], 
+      SubscriptBox["d", "1"]]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SubscriptBox["d", "0"], "-", " ", 
+     SubscriptBox["s", "0"]}], 
+    SubscriptBox["d", "1"]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nSimplifying:\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "ss"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FractionBox[
+   RowBox[{
+    SubscriptBox["d", "0"], "-", 
+    SubscriptBox["s", "0"]}], 
+   RowBox[{
+    SubscriptBox["d", "1"], "+", 
+    SubscriptBox["s", "1"]}]]],
+  CellChangeTimes->{3.6561192086471653`*^9}],
+ "\nThe economic interpretation of the condition that ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "ss"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > 0 iff ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["d", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["s", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is that there must consumer surplus (at 1 unit of production) must be \
+strictly greater than the fixed cost of production for the market to exist."
+}], "Text",
+ CellChangeTimes->{{3.656118548878793*^9, 3.656118799991132*^9}, {
+  3.6561188737318287`*^9, 3.6561189374800053`*^9}, {3.6561189963972216`*^9, 
+  3.656119088396123*^9}, {3.6561191233044147`*^9, 3.6561191814778104`*^9}, {
+  3.6561192154299517`*^9, 3.656119228256591*^9}, {3.6561194248329525`*^9, 
+  3.6561194657409973`*^9}, {3.6561195163361864`*^9, 3.6561195674347677`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
 Cell["Exercise 9", "Section",
  CellChangeTimes->{{3.6560436002380633`*^9, 3.6560436032311974`*^9}}],
+
+Cell[TextData[{
+ "Any fixed point on a contracting mapping must be unique, because if there \
+are two unique fixed points, the distance between these points will be the \
+same in the image as in the preimage.  However, for a contraction mapping, \
+two points in the image must be closer than they are in the preimage.\n\n\
+Construct the series ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "t"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") by function iteration: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "t"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "\[EmptyCircle]t"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "(x). Because f is a contraction mapping:\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", "(", 
+    RowBox[{
+     RowBox[{"f", "(", 
+      SubscriptBox["x", "t"], ")"}], ",", " ", 
+     RowBox[{"f", "(", "x", ")"}]}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Lambda]d", "(", 
+    RowBox[{
+     SubscriptBox["x", "t"], ",", " ", "x"}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", \[Lambda] \[Element] [0, 1)\n\nor\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", "(", 
+    SubscriptBox["x", 
+     RowBox[{"t", "+", "1"}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", x) \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Lambda]d", "(", 
+    RowBox[{
+     SubscriptBox["x", "t"], ",", " ", "x"}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[Lambda]", 
+     RowBox[{"t", "+", "1"}]], 
+    RowBox[{"d", "(", 
+     RowBox[{
+      SubscriptBox["x", "0"], ",", " ", "x"}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nwhich tends to 0 because ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Lambda]", 
+    RowBox[{"t", "+", "1"}]], TraditionalForm]]],
+ " tends to 0.  Thus ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", "(", 
+    SubscriptBox["x", "t"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", x) \[LessEqual] 0.  Since distance must be positive: ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["lim", 
+    RowBox[{"t", "\[Rule]", "\[Infinity]"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", "(", 
+    SubscriptBox["x", "t"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", x) = 0."
+}], "Text",
+ CellChangeTimes->{{3.6561216765364447`*^9, 3.656121767194537*^9}, {
+  3.656121892732623*^9, 3.656121937063632*^9}, {3.6561220218640113`*^9, 
+  3.6561220223483934`*^9}, {3.65612208917181*^9, 3.6561224598246098`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell["Exercise 10", "Section",
  CellChangeTimes->{{3.6560436069388404`*^9, 3.6560436093485646`*^9}}],
 
+Cell[TextData[{
+ "A contraction mapping is a mapping from a set to itself such that the \
+distance between two points is always greater than the distance between their \
+images.\n\nf(x) = x/2, x \[Element] \[DoubleStruckCapitalR] is a contraction \
+mapping because the distance between two points in the image is always 1/2 \
+the distance between them in the preimage.  By Banach\[CloseCurlyQuote]s \
+theorem, there is a unique fixed point.\nf(X) = 1/x, 0 < x< 1 is not a \
+contraction mapping because the distance between two points in the image is \
+always greater than the distance between them in the preimage.\nf(x) = \
+1/(1+x) 0 < x < 1.  Note that if x > 0 then 1/(1+x).  Thus the distance \
+between two points in the image is always less than the distance between two \
+points in the preimage:\n||(",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", 
+    SubscriptBox["x", "0"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") - ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", 
+    SubscriptBox["x", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ")||  = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{"1", "+", 
+     SubscriptBox["x", "0"]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{"1", " ", "+", " ", 
+     SubscriptBox["x", "1"]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"1", "+", 
+     SubscriptBox["x", "1"], " ", "+", " ", "1", " ", "+", " ", 
+     SubscriptBox["x", "0"]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       SubscriptBox["x", "0"]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", " ", "+", " ", 
+       SubscriptBox["x", "1"]}], ")"}]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SubscriptBox["x", "1"], " ", "-", " ", 
+     SubscriptBox["x", "0"]}], 
+    RowBox[{"1", " ", "+", " ", 
+     SubscriptBox["x", "1"], "+", " ", 
+     SubscriptBox["x", "0"], " ", "+", " ", 
+     RowBox[{
+      SubscriptBox["x", "0"], 
+      SubscriptBox["x", "1"]}]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " . Since 0 < ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], " "}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " < 1 and 0 < ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " < 1, (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") << 1 (i.e. very small). Ignoring this term, we have:\n ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SubscriptBox["x", "1"], "-", " ", 
+     SubscriptBox["x", "0"]}], 
+    RowBox[{"1", " ", "+", " ", 
+     SubscriptBox["x", "1"], "+", " ", 
+     SubscriptBox["x", "0"]}]], TraditionalForm]]],
+ " which must be < ||",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "||\n By Banach\[CloseCurlyQuote]s theorem, there is a unique fixed point."
+}], "Text",
+ CellChangeTimes->{{3.6561206335492063`*^9, 3.65612100009505*^9}, {
+  3.6561210699384356`*^9, 3.656121115881504*^9}, {3.6561211469890733`*^9, 
+  3.6561215081317625`*^9}, {3.65612154597478*^9, 3.656121651329808*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
 Cell["Exercise 11", "Section",
  CellChangeTimes->{{3.656043611988429*^9, 3.656043614238036*^9}}],
+
+Cell[TextData[{
+ "Consider the present value of the cash stream if the buyout is accepted:\n\
+15000 - ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"200", " ", 
+    RowBox[{"(", 
+     FractionBox[
+      RowBox[{"1", "-", " ", 
+       SuperscriptBox[
+        RowBox[{"(", "1.01", ")"}], 
+        RowBox[{"-", "60"}]]}], ".01"], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 15000 - 8991.01 = 6009.00\nConsider the present value of the \
+alternative:\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"200", " ", 
+    RowBox[{"(", 
+     FractionBox[
+      RowBox[{"1", "-", " ", 
+       SuperscriptBox[
+        RowBox[{"(", "1.01", ")"}], 
+        RowBox[{"-", "60"}]]}], ".01"], ")"}]}], TraditionalForm]]],
+ " = 8991.01\nNot accepting the buyout offer is better."
+}], "Text",
+ CellChangeTimes->{{3.65611996341215*^9, 3.6561200346779566`*^9}, {
+  3.6561201895214972`*^9, 3.656120291404348*^9}, {3.6561204510380464`*^9, 
+  3.656120454727115*^9}, {3.6561204854793673`*^9, 3.6561205461459675`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"15000", " ", "-", " ", 
+  RowBox[{"TimeValue", "[", 
+   RowBox[{
+    RowBox[{"Annuity", "[", 
+     RowBox[{"200", ",", "60"}], "]"}], ",", " ", ".01", ",", " ", "0"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.656120295955681*^9, 3.6561203250295696`*^9}, {
+  3.656120373565693*^9, 3.6561204449091444`*^9}}],
+
+Cell[BoxData["6008.992318755203`"], "Output",
+ CellChangeTimes->{
+  3.656120383202967*^9, {3.6561204156225777`*^9, 3.656120445409006*^9}}]
+}, Open  ]]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1326,8 +1967,8 @@ Cell[BoxData[""], "Input",
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1440, 877},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{1424, 866},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1358,168 +1999,190 @@ Cell[CellGroupData[{
 Cell[3736, 120, 99, 1, 70, "Section"],
 Cell[3838, 123, 2107, 69, 175, "Text"]
 }, Open  ]],
-Cell[5960, 195, 97, 1, 70, "Section"],
-Cell[6060, 198, 97, 1, 56, "Section"],
-Cell[6160, 201, 97, 1, 56, "Section"],
-Cell[6260, 204, 99, 1, 56, "Section"],
-Cell[6362, 207, 100, 1, 56, "Section"],
-Cell[6465, 210, 96, 1, 56, "Section"],
 Cell[CellGroupData[{
-Cell[6586, 215, 109, 1, 56, "Section"],
-Cell[6698, 218, 436, 9, 106, "Text"],
-Cell[7137, 229, 567, 16, 31, "Input"],
-Cell[CellGroupData[{
-Cell[7729, 249, 154, 3, 31, "Input"],
-Cell[7886, 254, 147, 3, 46, "Output"]
-}, Open  ]],
-Cell[8048, 260, 1032, 27, 72, "Input"],
-Cell[CellGroupData[{
-Cell[9105, 291, 248, 6, 31, "Input"],
-Cell[CellGroupData[{
-Cell[9378, 301, 102, 1, 23, "Print"],
-Cell[9483, 304, 101, 1, 23, "Print"],
-Cell[9587, 307, 105, 1, 23, "Print"],
-Cell[9695, 310, 107, 1, 23, "Print"],
-Cell[9805, 313, 109, 1, 23, "Print"],
-Cell[9917, 316, 111, 1, 23, "Print"],
-Cell[10031, 319, 113, 1, 23, "Print"],
-Cell[10147, 322, 115, 1, 23, "Print"],
-Cell[10265, 325, 113, 1, 23, "Print"],
-Cell[10381, 328, 113, 1, 23, "Print"]
-}, Open  ]]
-}, Open  ]],
-Cell[10521, 333, 446, 13, 31, "Input"],
-Cell[CellGroupData[{
-Cell[10992, 350, 159, 3, 31, "Input"],
-Cell[11154, 355, 97, 2, 34, "Output"]
+Cell[5982, 197, 150, 2, 70, "Section"],
+Cell[6135, 201, 1912, 61, 135, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11288, 362, 249, 6, 31, "Input"],
+Cell[8084, 267, 145, 2, 70, "Section"],
+Cell[8232, 271, 3749, 131, 324, "Text"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[11562, 372, 89, 1, 23, "Print"],
-Cell[11654, 375, 87, 1, 23, "Print"],
-Cell[11744, 378, 86, 1, 23, "Print"],
-Cell[11833, 381, 84, 1, 23, "Print"],
-Cell[11920, 384, 89, 1, 23, "Print"],
-Cell[12012, 387, 88, 1, 23, "Print"],
-Cell[12103, 390, 86, 1, 23, "Print"],
-Cell[12192, 393, 87, 1, 23, "Print"],
-Cell[12282, 396, 86, 1, 23, "Print"],
-Cell[12371, 399, 87, 1, 23, "Print"]
+Cell[12018, 407, 97, 1, 70, "Section"],
+Cell[12118, 410, 4542, 172, 311, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16697, 587, 99, 1, 70, "Section"],
+Cell[16799, 590, 2780, 89, 188, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19616, 684, 100, 1, 70, "Section"],
+Cell[19719, 687, 3594, 111, 193, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23350, 803, 96, 1, 70, "Section"],
+Cell[23449, 806, 1000, 28, 142, "Text"],
+Cell[CellGroupData[{
+Cell[24474, 838, 333, 8, 31, "Input"],
+Cell[24810, 848, 138, 2, 31, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12507, 406, 364, 9, 31, "Input"],
-Cell[12874, 417, 288, 6, 31, "Output"]
+Cell[24997, 856, 109, 1, 70, "Section"],
+Cell[25109, 859, 436, 9, 68, "Text"],
+Cell[25548, 870, 567, 16, 31, "Input"],
+Cell[CellGroupData[{
+Cell[26140, 890, 154, 3, 31, "Input"],
+Cell[26297, 895, 147, 3, 46, "Output"]
+}, Open  ]],
+Cell[26459, 901, 1032, 27, 31, "Input"],
+Cell[CellGroupData[{
+Cell[27516, 932, 248, 6, 31, "Input"],
+Cell[CellGroupData[{
+Cell[27789, 942, 102, 1, 23, "Print"],
+Cell[27894, 945, 101, 1, 23, "Print"],
+Cell[27998, 948, 105, 1, 23, "Print"],
+Cell[28106, 951, 107, 1, 23, "Print"],
+Cell[28216, 954, 109, 1, 23, "Print"],
+Cell[28328, 957, 111, 1, 23, "Print"],
+Cell[28442, 960, 113, 1, 23, "Print"],
+Cell[28558, 963, 115, 1, 23, "Print"],
+Cell[28676, 966, 113, 1, 23, "Print"],
+Cell[28792, 969, 113, 1, 23, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[28932, 974, 446, 13, 31, "Input"],
+Cell[CellGroupData[{
+Cell[29403, 991, 159, 3, 31, "Input"],
+Cell[29565, 996, 97, 2, 34, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13199, 428, 182, 3, 31, "Input"],
+Cell[29699, 1003, 249, 6, 31, "Input"],
 Cell[CellGroupData[{
-Cell[13406, 435, 76, 1, 23, "Print"],
-Cell[13485, 438, 77, 1, 23, "Print"],
-Cell[13565, 441, 77, 1, 23, "Print"],
-Cell[13645, 444, 81, 1, 23, "Print"],
-Cell[13729, 447, 80, 1, 23, "Print"],
-Cell[13812, 450, 85, 1, 23, "Print"],
-Cell[13900, 453, 86, 1, 23, "Print"],
-Cell[13989, 456, 89, 1, 23, "Print"],
-Cell[14081, 459, 89, 1, 23, "Print"],
-Cell[14173, 462, 87, 1, 23, "Print"]
+Cell[29973, 1013, 89, 1, 23, "Print"],
+Cell[30065, 1016, 87, 1, 23, "Print"],
+Cell[30155, 1019, 86, 1, 23, "Print"],
+Cell[30244, 1022, 84, 1, 23, "Print"],
+Cell[30331, 1025, 89, 1, 23, "Print"],
+Cell[30423, 1028, 88, 1, 23, "Print"],
+Cell[30514, 1031, 86, 1, 23, "Print"],
+Cell[30603, 1034, 87, 1, 23, "Print"],
+Cell[30693, 1037, 86, 1, 23, "Print"],
+Cell[30782, 1040, 87, 1, 23, "Print"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14309, 469, 185, 3, 31, "Input"],
+Cell[30918, 1047, 364, 9, 31, "Input"],
+Cell[31285, 1058, 288, 6, 31, "Output"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[14519, 476, 87, 1, 23, "Print"],
-Cell[14609, 479, 85, 1, 23, "Print"],
-Cell[14697, 482, 87, 1, 23, "Print"],
-Cell[14787, 485, 89, 1, 23, "Print"],
-Cell[14879, 488, 87, 1, 23, "Print"],
-Cell[14969, 491, 88, 1, 23, "Print"],
-Cell[15060, 494, 89, 1, 23, "Print"],
-Cell[15152, 497, 88, 1, 23, "Print"],
-Cell[15243, 500, 89, 1, 23, "Print"],
-Cell[15335, 503, 88, 1, 23, "Print"]
+Cell[31610, 1069, 182, 3, 31, "Input"],
+Cell[CellGroupData[{
+Cell[31817, 1076, 76, 1, 23, "Print"],
+Cell[31896, 1079, 77, 1, 23, "Print"],
+Cell[31976, 1082, 77, 1, 23, "Print"],
+Cell[32056, 1085, 81, 1, 23, "Print"],
+Cell[32140, 1088, 80, 1, 23, "Print"],
+Cell[32223, 1091, 85, 1, 23, "Print"],
+Cell[32311, 1094, 86, 1, 23, "Print"],
+Cell[32400, 1097, 89, 1, 23, "Print"],
+Cell[32492, 1100, 89, 1, 23, "Print"],
+Cell[32584, 1103, 87, 1, 23, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32720, 1110, 185, 3, 31, "Input"],
+Cell[CellGroupData[{
+Cell[32930, 1117, 87, 1, 23, "Print"],
+Cell[33020, 1120, 85, 1, 23, "Print"],
+Cell[33108, 1123, 87, 1, 23, "Print"],
+Cell[33198, 1126, 89, 1, 23, "Print"],
+Cell[33290, 1129, 87, 1, 23, "Print"],
+Cell[33380, 1132, 88, 1, 23, "Print"],
+Cell[33471, 1135, 89, 1, 23, "Print"],
+Cell[33563, 1138, 88, 1, 23, "Print"],
+Cell[33654, 1141, 89, 1, 23, "Print"],
+Cell[33746, 1144, 88, 1, 23, "Print"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[15484, 511, 139, 2, 70, "Section"],
+Cell[33895, 1152, 139, 2, 70, "Section"],
 Cell[CellGroupData[{
-Cell[15648, 517, 361, 10, 31, "Input"],
-Cell[16012, 529, 195, 5, 46, "Output"]
+Cell[34059, 1158, 361, 10, 31, "Input"],
+Cell[34423, 1170, 195, 5, 46, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16244, 539, 219, 6, 31, "Input"],
-Cell[16466, 547, 116, 1, 31, "Output"]
+Cell[34655, 1180, 219, 6, 31, "Input"],
+Cell[34877, 1188, 116, 1, 31, "Output"]
 }, Open  ]],
-Cell[16597, 551, 86, 1, 30, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[16720, 557, 113, 1, 70, "Section"],
-Cell[16836, 560, 2449, 53, 212, "Input"],
-Cell[CellGroupData[{
-Cell[19310, 617, 543, 13, 31, "Input"],
-Cell[19856, 632, 2377, 39, 132, "Output"]
+Cell[35008, 1192, 86, 1, 30, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22270, 676, 84, 2, 31, "Input"],
-Cell[22357, 680, 1519, 36, 245, "Output"]
+Cell[35131, 1198, 113, 1, 70, "Section"],
+Cell[35247, 1201, 2449, 53, 192, "Input"],
+Cell[CellGroupData[{
+Cell[37721, 1258, 543, 13, 31, "Input"],
+Cell[38267, 1273, 2377, 39, 72, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23913, 721, 549, 13, 31, "Input"],
-Cell[24465, 736, 3089, 52, 132, "Output"]
+Cell[40681, 1317, 84, 2, 31, "Input"],
+Cell[40768, 1321, 1519, 36, 245, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27591, 793, 84, 2, 31, "Input"],
-Cell[27678, 797, 1500, 36, 243, "Output"]
+Cell[42324, 1362, 549, 13, 31, "Input"],
+Cell[42876, 1377, 3089, 52, 132, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46002, 1434, 84, 2, 31, "Input"],
+Cell[46089, 1438, 1500, 36, 243, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[29227, 839, 111, 1, 70, "Section"],
-Cell[29341, 842, 1031, 39, 81, "Text"],
+Cell[47638, 1480, 111, 1, 70, "Section"],
+Cell[47752, 1483, 1031, 39, 81, "Text"],
 Cell[CellGroupData[{
-Cell[30397, 885, 423, 10, 31, "Input"],
-Cell[30823, 897, 251, 7, 46, "Output"]
+Cell[48808, 1526, 423, 10, 31, "Input"],
+Cell[49234, 1538, 251, 7, 46, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[31111, 909, 546, 12, 31, "Input"],
-Cell[31660, 923, 2391, 38, 92, "Output"]
+Cell[49522, 1550, 546, 12, 31, "Input"],
+Cell[50071, 1564, 2391, 38, 92, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34088, 966, 84, 2, 31, "Input"],
-Cell[34175, 970, 1454, 35, 238, "Output"]
+Cell[52499, 1607, 84, 2, 31, "Input"],
+Cell[52586, 1611, 1454, 35, 238, "Output"]
 }, Open  ]],
-Cell[35644, 1008, 139, 1, 30, "Text"],
+Cell[54055, 1649, 139, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[35808, 1013, 337, 9, 31, "Input"],
-Cell[36148, 1024, 250, 7, 46, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[36435, 1036, 411, 11, 31, "Input"],
-Cell[36849, 1049, 373, 7, 31, "Output"]
+Cell[54219, 1654, 337, 9, 31, "Input"],
+Cell[54559, 1665, 250, 7, 46, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[37259, 1061, 84, 2, 31, "Input"],
-Cell[37346, 1065, 1036, 27, 222, "Output"]
+Cell[54846, 1677, 411, 11, 31, "Input"],
+Cell[55260, 1690, 373, 7, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38419, 1097, 88, 2, 31, "Input"],
-Cell[38510, 1101, 1037, 27, 222, "Output"]
+Cell[55670, 1702, 84, 2, 31, "Input"],
+Cell[55757, 1706, 1036, 27, 222, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[39584, 1133, 147, 2, 31, "Input"],
-Cell[39734, 1137, 122, 2, 31, "Output"]
+Cell[56830, 1738, 88, 2, 31, "Input"],
+Cell[56921, 1742, 1037, 27, 222, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[39893, 1144, 410, 11, 31, "Input"],
-Cell[40306, 1157, 4168, 96, 272, "Output"]
+Cell[57995, 1774, 147, 2, 31, "Input"],
+Cell[58145, 1778, 122, 2, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[44511, 1258, 305, 7, 31, "Input"],
-Cell[44819, 1267, 2648, 53, 237, "Output"]
+Cell[58304, 1785, 410, 11, 31, "Input"],
+Cell[58717, 1798, 4168, 96, 272, "Output"]
 }, Open  ]],
-Cell[47482, 1323, 96, 1, 31, "Input"]
+Cell[CellGroupData[{
+Cell[62922, 1899, 305, 7, 31, "Input"],
+Cell[63230, 1908, 2648, 53, 237, "Output"]
+}, Open  ]],
+Cell[65893, 1964, 96, 1, 31, "Input"]
 }, Open  ]]
 }, Open  ]]
 }
