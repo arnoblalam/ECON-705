@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1344,         57]
-NotebookOptionsPosition[       930,         37]
-NotebookOutlinePosition[      1275,         52]
-CellTagsIndexPosition[      1232,         49]
+NotebookDataLength[     36570,       1123]
+NotebookOptionsPosition[     34552,       1048]
+NotebookOutlinePosition[     35077,       1069]
+CellTagsIndexPosition[     35034,       1066]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,20 +23,1037 @@ Cell[CellGroupData[{
 Cell["HW9", "Title",
  CellChangeTimes->{{3.65529824436355*^9, 3.655298248583187*^9}}],
 
+Cell[CellGroupData[{
+
 Cell["Exercise 1", "Section",
  CellChangeTimes->{{3.655298252136855*^9, 3.655298261808571*^9}}],
+
+Cell[TextData[{
+ "12.17 Since x is in the interior of S, there exists an open ball B(x, \
+\[Epsilon]) that is a subset of S. There is a limit to the sequence ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox[
+    RowBox[{"{", 
+     SubscriptBox["x", "n"], "}"}], 
+    RowBox[{"n", " ", "=", " ", "1"}], "\[Infinity]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (meaning there exists an N such that d(",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", x) < \[Epsilon] for sufficiently large n).  Therefore, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] B(x, \[Epsilon]). \n\n12.20 In a finite metric space S, all \
+single points are closed (consider any ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox[
+    RowBox[{"{", 
+     SubscriptBox["x", "n"], "}"}], 
+    RowBox[{"n", " ", "=", " ", "1"}], "\[Infinity]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " in S that converges to x. x \[Element] S).  The finite union of all single \
+points in S is alsio closed.  The set of integers proof is the same as with \
+the distance/metric function == 1. \n\n12.24 ?\n\n12. 29\nLet C be a closed \
+subset of a compact set T.  U is an open cover of C.  Since C is closed, \
+therefore T\[Backslash]C is open in T.  if we add T\[Backslash]C to U, we see \
+that U\:222a(T\[Backslash]C) is also an open cover of T.  As T is compact, \
+there is a finite subcover of U, say V={U1,U2,\[Ellipsis],Ur}.  This covers C \
+by the fact that it covers T.  If T\[Backslash]C is an element of V, then it \
+can be removed from V and the rest of V still covers C.\nThus we have a \
+finite subcover of U which covers C, and hence C is compact. (taken from \
+Wikipedia)"
+}], "Text",
+ CellChangeTimes->{{3.6556080348380327`*^9, 3.655608060248719*^9}, {
+  3.6556081036678505`*^9, 3.6556083542875433`*^9}, {3.655608417135709*^9, 
+  3.655608417696129*^9}, {3.6556086056387796`*^9, 3.655608627201312*^9}, {
+  3.6556086840145435`*^9, 3.655608810003176*^9}, {3.6556088609217644`*^9, 
+  3.6556089217690945`*^9}, {3.655609009652857*^9, 3.6556090729168644`*^9}, {
+  3.6556091203250685`*^9, 3.655609120994919*^9}, {3.655609164732693*^9, 
+  3.6556091663508406`*^9}, {3.6556093403377647`*^9, 3.655609509140465*^9}}]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell["Exercise 2", "Section",
  CellChangeTimes->{{3.655298269709711*^9, 3.655298271804101*^9}}],
 
-Cell["", "Text"]
+Cell[TextData[{
+ "Assume that there is a R-maximal element ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "+"], TraditionalForm]]],
+ " in the set S.\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[ForAll]", "x"], 
+    RowBox[{"\[Element]", " ", "S"}]}], TraditionalForm]]],
+ " \[Not] (x R ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "+"], TraditionalForm]]],
+ ")\n\nThe strict lower contour set of the relationship on S is:\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "s"], TraditionalForm]]],
+ " = {y \[Element] S | s P y} (where P is the asymmetric subrelation of R)\n\n\
+Since ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "s"], TraditionalForm]]],
+ " is a cover of S\nS \[SubsetEqual] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox["\[Union]", 
+     RowBox[{"a", " ", "\[Element]", " ", "A"}]], 
+    SubscriptBox["P", 
+     SubscriptBox["s", "a"]]}], TraditionalForm]]],
+ "\n\nBut by the strict lower contour set y \[Element] S iff s P y.  Thus S \
+\[SubsetEqual] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox["\[Union]", 
+     RowBox[{"a", " ", "\[Element]", " ", "A"}]], 
+    SubscriptBox["P", 
+     SubscriptBox["s", "a"]]}], TraditionalForm]]],
+ ".  We have a contradiction, so it must be the case that there exists no \
+maximal element.\n\nIt is not the case that there is no R-maximal element in \
+the set S iff the lower contour sets of the points x \[Element] S form a \
+cover of S because in this case the maximal element can be in the contour \
+set.  Thus, there is no contradiction when the comntour set covers S."
+}], "Text",
+ CellChangeTimes->{{3.655484400207717*^9, 3.655484404743326*^9}, {
+   3.6554844376938276`*^9, 3.655484444094102*^9}, {3.6554845107291145`*^9, 
+   3.655484542096903*^9}, 3.6554845802080064`*^9, {3.655484612522627*^9, 
+   3.655484629976633*^9}, {3.655484704964738*^9, 3.6554847058025775`*^9}, {
+   3.6554847733849974`*^9, 3.6554848387345743`*^9}, {3.655484897409193*^9, 
+   3.655484906996852*^9}, {3.6554849423764*^9, 3.6554850999409094`*^9}, {
+   3.655485139068001*^9, 3.655485174766099*^9}, {3.6554852163959064`*^9, 
+   3.6554853175980988`*^9}, {3.6554853543943577`*^9, 3.655485416934264*^9}, {
+   3.65548554446243*^9, 3.655485544667575*^9}, 3.6554856114957004`*^9, {
+   3.6554856675359726`*^9, 3.6554857345305634`*^9}, {3.6554858159977555`*^9, 
+   3.655485887069598*^9}, {3.6555687802863836`*^9, 3.6555689382234774`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 3", "Section",
+ CellChangeTimes->{{3.65548642249022*^9, 3.655486424413207*^9}}],
+
+Cell[TextData[{
+ "Theorem:\nSuppose that on a set X, an acyclic binary relation P has open \
+lower contour sets. Then there exists a P-maximal element in any non-empty \
+compact subset S \[Subset] X.\n\nProof:\nIf there is no ",
+ StyleBox["P-maximal element",
+  FontVariations->{"Underline"->True}],
+ " in S then every element in S is dominated by some other element in S:\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", 
+    RowBox[{"s", " ", "\[Element]", " ", "S"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", 
+    RowBox[{
+     RowBox[{"s", "'"}], " ", "\[Element]", " ", "S"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " s\[CloseCurlyQuote] < s\n\nThe lower contour sets form a ",
+ StyleBox["cover",
+  FontVariations->{"Underline"->True}],
+ " of S\nS \[SubsetEqual] ",
+ Cell[BoxData[
+  FormBox[
+   UnderscriptBox["\[Union]", 
+    RowBox[{"x", " ", "\[Element]", " ", "S"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (-\[Infinity] ... x)\n\nThe lower contour sets are ",
+ StyleBox["open",
+  FontVariations->{"Underline"->True}],
+ ". Thus the lower contour sets are an ",
+ StyleBox["open cover",
+  FontVariations->{"Underline"->True}],
+ " of S.\n\nS is ",
+ StyleBox["compact",
+  FontVariations->{"Underline"->True}],
+ ".  Thus, there is a finite subcover of S.  For each set in the subcover, \
+pick any point in S for which it is the lower contour set.  The collection of \
+such points is a finite set, A, of points whose lower contour sets cover S: \n\
+S ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[SubsetEqual]", 
+    SubscriptBox["\:222a", 
+     RowBox[{"x", "\[Element]", "A"}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "(\[Minus]\[Infinity] .. x).\n\n A is also covered by this \[FiLigature]nite \
+subcover of S. So each point in A is \[OpenCurlyDoubleQuote]dominated\
+\[CloseCurlyDoubleQuote] by some point in A. Since A is a \[FiLigature]nite \
+set, which is only possible if P cycles.\n \n Definitions:\n A P-Maximal \
+element is an element ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "M"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " such that ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", 
+    RowBox[{"x", " ", "\[Element]", " ", "X"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "M"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " P x) \[Or] \[Not](x P ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "M"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ")\n A cover C of a set S is a collection of sets such that S \[SubsetEqual] \
+",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Union]", 
+    RowBox[{" ", 
+     RowBox[{"x", " ", "\[Element]", " ", "A"}]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["C", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".  That is, some arbitrary union of the ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["C", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " contains S.\n A finite subcover is a subset of C that covers S under \
+finite union.\n A set is compact iff there exists a finite subcover for any \
+open subcover.\n The strict lower contour set is the P \[SubsetEqual] X such \
+that: P = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", 
+    RowBox[{"s", " ", "\[Element]", " ", "X"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " {y \[Element] S | s P y}.  That is every element on the lower contour set \
+is strictly dominated by some element in the original set.\n An open set S \
+\[Element] \[Tau] of the topology (X, \[Tau]) which is defined by:\n x, \
+\[EmptySet] \[Element] \[Tau]\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] \[Tau] \[DoubleRightArrow] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Intersection] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] \[Tau]\n ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["\[ForAll]", 
+     RowBox[{"\[Alpha]", " ", "\[Element]", " ", "I"}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "\[Alpha]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] \[Tau]) \[DoubleRightArrow] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Union]", 
+    RowBox[{"\[Alpha]", " ", "\[Element]", " ", "I"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["V", "\[Alpha]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Element] \[Tau]. "
+}], "Text",
+ CellChangeTimes->{{3.6554868432452946`*^9, 3.655486954311676*^9}, {
+  3.655487013550727*^9, 3.655487043791628*^9}, {3.6554871176521883`*^9, 
+  3.655487258549596*^9}, {3.6554873219035406`*^9, 3.6554873229195137`*^9}, {
+  3.6554873767780724`*^9, 3.6554874121763086`*^9}, {3.6554875222699914`*^9, 
+  3.655487536719596*^9}, {3.655487628347082*^9, 3.6554876499149556`*^9}, {
+  3.6554877015536933`*^9, 3.6554877326420193`*^9}, {3.655487786314432*^9, 
+  3.65548786718279*^9}, {3.6555690821034765`*^9, 3.6555690889807854`*^9}, {
+  3.6555691354470778`*^9, 3.6555691477781954`*^9}, {3.6555692497871933`*^9, 
+  3.6555692873002577`*^9}, {3.6555693493069763`*^9, 3.655569508140731*^9}, {
+  3.6555695384103365`*^9, 3.65556963969567*^9}, {3.6555696718752213`*^9, 
+  3.655569683711011*^9}, {3.655569734593042*^9, 3.6555697484904957`*^9}, {
+  3.6555698249446063`*^9, 3.6555699360732765`*^9}, {3.655569967386697*^9, 
+  3.6555706553757763`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 4", "Section",
+ CellChangeTimes->{{3.6554879266144056`*^9, 3.6554879286147823`*^9}}],
+
+Cell[TextData[{
+ "Consider a point q \[Element] K.  Then by Hausdorf condition, there exists \
+open neighborhoods N(q) and N(p) such that N(q) \[Intersection] N(p) = \
+\[EmptySet]. K \[SubsetEqual] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Union]", 
+    RowBox[{"q", " ", "\[Element]", " ", "K"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " N(q).  That is N(q) is an open subcover of N(q).  Since K is compact set, \
+there is a finite subcover of K.n Let U be the union of the finite subcover \
+of A.  For eah set in the finite subcover there is a collection of open \
+neighborhoods of p.  Let U be the intersection of all these neighborhoods.  \
+Then V is ",
+ "an open set containing K that does not intersect U. "
+}], "Text",
+ CellChangeTimes->{{3.6555710054354053`*^9, 3.655571177833338*^9}, {
+  3.655571220179163*^9, 3.6555712411201873`*^9}, {3.6555712758649735`*^9, 
+  3.6555713221210012`*^9}, {3.6555713801932497`*^9, 3.6555714899195848`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 5", "Section",
+ CellChangeTimes->{{3.655571810365055*^9, 3.655571815226552*^9}}],
+
+Cell["\<\
+A metric space is a set for which, for any pair of elements in the set, a \
+distance function is defined.  The distance function must follow these \
+properties:
+d(x, y) \[GreaterEqual] 0
+d(x, y) = d (y, x)
+d(x, y) = 0 \[DoubleLeftRightArrow] x = y
+d(x, z) \[LessEqual] d(x, y) + d(y, z)
+
+The function f(x, x\[CloseCurlyQuote]) given for this problem satisfies these \
+properties.  f(x, x\[CloseCurlyQuote]) can only take on the values 0 and 1 \
+and is equal to 0 if x = x\[CloseCurlyQuote] and 1 otherwise.   It is the \
+case that if x = x\[CloseCurlyQuote] then d(x, x\[CloseCurlyQuote]) = d(x\
+\[CloseCurlyQuote] x) = 0.  Otherwise d(x, x\[CloseCurlyQuote]) = 1.  Finally \
+if y, z = x then d(x, y) = 0, d(y, z) = 0 \[LessEqual] d(x, z) = 0.  \
+Otherwise if x \[NotEqual] y then d(x, z) = \[LessEqual] d(x, y) + d(y, z)  \
+\[LongRightArrow] 1 \[LessEqual] 0 + 1 or if x \[NotEqual] z then d(x, z) = \
+\[LessEqual] d(x, y) + d(y, z) \[LongRightArrow] 1 \[LessEqual] 0 + 1 or x \
+\[NotEqual] y \[NotEqual] z then d(x, z) \[LessEqual] d(x,y) + d(x,z) \
+\[LongRightArrow] 1 \[LessEqual] 2.
+\
+\>", "Text",
+ CellChangeTimes->{{3.6555718180118055`*^9, 3.6555720019533978`*^9}, {
+   3.6555720791958723`*^9, 3.655572098057728*^9}, {3.6555721368489923`*^9, 
+   3.6555724742656264`*^9}, {3.6555725380563707`*^9, 
+   3.6555725985507183`*^9}, {3.6555731983248997`*^9, 3.6555732520778847`*^9}, 
+   3.6555733077099695`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 6", "Section",
+ CellChangeTimes->{{3.655573316583108*^9, 3.6555733197038765`*^9}}],
+
+Cell[TextData[{
+ "Case 1: Assume z > x and y > z\n|",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ "| \[LessEqual] |",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "y"], TraditionalForm]]],
+ "| + |",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "y"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ "|\nWe rearrange the above using assumptions so it is strictly positive\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ " \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "y"], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "y"], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ " \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"-", "2"}], "y"], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"-", "2"}], "z"], TraditionalForm]]],
+ " \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"-", "2"}], "y"], TraditionalForm]]],
+ "\n-2y \[LessEqual] -2z\ny \[GreaterEqual] z\n\nx = 1, y = 3, z = 2\n|",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "1"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "2"], TraditionalForm]]],
+ "| \[LessEqual] |",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "1"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "3"], TraditionalForm]]],
+ "| + |",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "3"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "2"], TraditionalForm]]],
+ "|\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "2"], TraditionalForm]]],
+ " \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["2", "3"], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "6"], TraditionalForm]]],
+ "\n\nCase 2: Assume z > x and z > y\n|",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ "| \[LessEqual] |",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "y"], TraditionalForm]]],
+ "| + |",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "3"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "2"], TraditionalForm]]],
+ "|\nWe drop the absolute value signs because the differencses above are all \
+strictly positive given the assumptions\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ " \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "y"], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "y"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ "\nwhich simplifies to\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ " \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ " which is true\n\nCase 3: Assume z > x and x > y\n|",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ "| \[LessEqual] |",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "y"], TraditionalForm]]],
+ "| + |",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "3"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "2"], TraditionalForm]]],
+ "|\nWe rearrange the above using assumptions so it is strictly positive\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ " \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "y"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "y"], TraditionalForm]]],
+ "\nwhich simplifies to\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ " \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "z"], TraditionalForm]]],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "x"], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["2", "x"], TraditionalForm]]],
+ " \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["2", "z"], TraditionalForm]]],
+ "\n2z \[LessEqual] 2x\nz \[LessEqual] x which is true.\n\nThe other cases \
+are trivially true:\n|x| \[GreaterEqual] 0 by definition of |x|\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"|", 
+    RowBox[{
+     FractionBox["1", "x"], " ", "-", " ", 
+     FractionBox["1", "x"]}], "|"}], TraditionalForm]]],
+ " = 0\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"|", 
+     RowBox[{
+      FractionBox["1", "x"], "-", 
+      FractionBox["1", "y"]}], "|"}], "=", 
+    RowBox[{"|", 
+     RowBox[{
+      FractionBox["1", "y"], "-", 
+      FractionBox["1", "x"]}], "|"}]}], TraditionalForm]]],
+ " by symmetry property of |x - y| (that is |x - y| = |y - x|"
+}], "Text",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBWIQvaxW6mexzWvHHyt/s5YAaQ/n17wg+kNLswmIvvsu
+1wJE2zGn2oHoCPW7rmC6aKoHiL4W8tAXRG9box0Coiffc4gA0SbnQmLA4usq
+E0C0RT5/Goh+tae6AET/yMjqBNF/8xp6QfSdjQfBtF5C0ywQPW/11R0gutlw
+8UkQHZT45xSIzvnhehFE71ix/CWIdtnG+Q5Ez7hq8wlEb3r+4RuINtI//R1E
+SxwWYiwF0k+VOvlANItrjxCIvhhpogCiW3R1XEA0D0ujO4g+tXl/DIg2Z3tZ
+BqJVAifUg2jLR5q9INpFcsEkEO0km7MaLP9ANLARSBc83x0EogE65KKc
+  "]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 7", "Section",
+ CellChangeTimes->{{3.6556008126995897`*^9, 3.655600815699724*^9}, {
+  3.655600886608679*^9, 3.655600887218111*^9}}],
+
+Cell[TextData[{
+ "Let S be a compact set and let x \[Element] S.  The set S is bounded, if ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", 
+    RowBox[{"s", " ", "\[Element]", " ", "S"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " d(x, s) < M where M is a positive integer.\n\nLet B(x, r) = {y \[Element] \
+S| d(x, y) < r} be an open ball with center x and radius r.\n\nFor any y \
+\[Element] S, y \[Element] ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[Union]", 
+    RowBox[{"i", " ", "=", " ", "1"}], "\[Infinity]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "B(x, i) since d(x, y) < \[Infinity].  Therefore {B(x, i)} is an open cover \
+of S.  Since S is compact, there is a finite subcover such that:\nS \[Subset] \
+",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Union]", 
+     RowBox[{"j", "=", "1"}], "m"], 
+    RowBox[{"B", "(", 
+     RowBox[{"x", ",", " ", 
+      SubscriptBox["i", "j"]}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".\nThis means S \[Subset] B(x, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"max", 
+    RowBox[{"{", 
+     RowBox[{
+      SubscriptBox["i", "1"], ",", " ", 
+      RowBox[{"...", " ", 
+       SubscriptBox["i", "j"]}]}], "}"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "). Therefore S is bounded."
+}], "Text",
+ CellChangeTimes->{{3.655601063939406*^9, 3.6556011027529984`*^9}, {
+  3.655601743990857*^9, 3.6556017934797497`*^9}, {3.655601853857937*^9, 
+  3.655601899196209*^9}, {3.6556021286240573`*^9, 3.655602231782444*^9}, {
+  3.6556023609717083`*^9, 3.6556025558404384`*^9}, {3.655602592874425*^9, 
+  3.6556026625945272`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 8", "Section",
+ CellChangeTimes->{{3.6556026992786465`*^9, 3.6556027041492157`*^9}}],
+
+Cell[TextData[{
+ "Suppose ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", 
+     SubscriptBox["t", "k"]], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is subsequence of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "t"], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " that converges to ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["x", "_"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".  There exists a positive real number such that:\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", 
+    RowBox[{"i", ",", 
+     RowBox[{"j", "\[Element]", "\[DoubleStruckCapitalN]"}]}]], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"i", ",", " ", 
+    RowBox[{"j", " ", ">", " ", 
+     RowBox[{
+      RowBox[{"M", "\[DoubleLongRightArrow]", "d"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["x", "i"], ",", " ", 
+        SubscriptBox["x", "j"]}]}]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ")< ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[Epsilon]", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".  By definition of convergence \[ForAll]k\[Element]N k > N\
+\[DoubleLongRightArrow]d(xnk,x) < ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["e", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".  By the triangle inequality, we have \n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", 
+    RowBox[{"m", " ", "\[Element]", " ", "\[DoubleStruckCapitalN]"}]], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " m > K \[DoubleLongRightArrow] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", "(", 
+    SubscriptBox["x", "m"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ",x) \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", "(", 
+    SubscriptBox["x", "m"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ",x) + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", "(", 
+    SubscriptBox["x", "nK"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ",x) < ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[Epsilon]", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[Epsilon]", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = \[Epsilon]"
+}], "Text",
+ CellChangeTimes->{{3.6556035676603765`*^9, 3.6556036775274987`*^9}, {
+  3.6556037705060854`*^9, 3.6556038432652493`*^9}, {3.6556039869109907`*^9, 
+  3.6556043796477413`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Comnputation 1", "Section",
+ CellChangeTimes->{{3.6556043971308584`*^9, 3.655604400918941*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"t", "/", 
+    RowBox[{"(", 
+     RowBox[{"t", "+", "1"}], ")"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "20"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.65560444732361*^9, 3.655604526211454*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], Opacity[
+    1.], LineBox[CompressedData["
+1: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
+SaB+5Uy+QOX/AUGVwc8=
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0.5},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None},
+  PlotRange->{{0, 20}, {0.5216109371765535, 0.9523809514554121}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.6556045279306936`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "A series is monotone if ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", 
+    RowBox[{"m", ">", "n"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["s", "m"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " > ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["s", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (monotone increasing) or  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", 
+    RowBox[{"m", ">", "n"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["s", "m"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " < ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["s", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (monotone decreasing).  A sequence is bounded if ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", 
+    RowBox[{" ", 
+     RowBox[{"x", " ", "\[Element]", " ", "R"}]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["s", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " < x.  A sequence is convergent if there exists a N \[Element] \
+\[DoubleStruckCapitalN] such that  for any n > N, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"|", 
+    RowBox[{
+     SubscriptBox["x", "n"], " ", "-", " ", "x"}], " ", "|", " ", 
+    RowBox[{"<", " ", "\[Epsilon]"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".\nMy seuqnce is monotone bounded and convergent."
+}], "Text",
+ CellChangeTimes->{{3.6556045395258603`*^9, 3.6556046436239815`*^9}, {
+  3.6556048465426865`*^9, 3.6556049475504475`*^9}, {3.655605058227892*^9, 
+  3.6556051424798326`*^9}, {3.655605179875842*^9, 3.6556052106662245`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"t", "/", "t"}], "+", "1"}], ",", " ", 
+   RowBox[{"t", " ", "\[Rule]", " ", "\[Infinity]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.655605212591592*^9, 3.6556052681034336`*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.6556052688019433`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Computational Exercise 2", "Section",
+ CellChangeTimes->{{3.6556054706131506`*^9, 3.655605476833234*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pdv", "[", 
+   RowBox[{"savings_", ",", " ", "rate_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"(", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dv", "=", 
+     RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Do", "[", 
+     RowBox[{
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"dv", ",", 
+        RowBox[{"(", 
+         FractionBox[
+          RowBox[{"savings", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"1", "+", " ", "rate"}], ")"}], 
+           RowBox[{"i", "-", "1"}]]], ")"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", " ", "1", ",", " ", 
+        RowBox[{"Length", "[", "savings", "]"}]}], "}"}]}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Return", " ", "[", 
+     RowBox[{"Total", "[", "dv", "]"}], "]"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.6556056022062197`*^9, 3.6556056242029905`*^9}, {
+  3.6556065495988584`*^9, 3.655606581698526*^9}, {3.655606709947731*^9, 
+  3.65560683331734*^9}, {3.655606882018002*^9, 3.6556069088390913`*^9}, {
+  3.655606961165122*^9, 3.6556071253652945`*^9}, {3.6556071760154257`*^9, 
+  3.655607309808951*^9}, {3.6556073425863886`*^9, 3.6556075827184906`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"pdv", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{"200", ",", "60"}], "]"}], ",", " ", ".01"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"StringForm", "[", 
+   RowBox[{
+   "\"\<The Present value of 60 payments of 200 at a 1% monthly interest rate \
+is ``\>\"", ",", 
+    RowBox[{"Round", "[", 
+     RowBox[{"%", ",", " ", "2"}], "]"}]}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.655607646601343*^9, 3.6556078131430197`*^9}}],
+
+Cell[BoxData["9080.91775805725`"], "Output",
+ CellChangeTimes->{{3.65560766717773*^9, 3.6556076807626743`*^9}, {
+  3.6556077910748615`*^9, 3.6556078135843444`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"The Present value of 60 payments of 200 at a 1% \
+monthly interest rate is \\!\\(\\*RowBox[{\\\"9080\\\"}]\\)\"\>",
+  StringForm[
+  "The Present value of 60 payments of 200 at a 1% monthly interest rate is \
+``", 9080],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.6556077985575857`*^9, 3.6556078135873275`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.655607686369665*^9, 3.65560768681401*^9}}]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{760, 793},
-WindowMargins->{{Automatic, 331}, {24, Automatic}},
+WindowSize->{1424, 877},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{612, 792}},
+Magnification:>1.5 Inherited,
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -52,11 +1069,60 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 85, 1, 101, "Title"],
-Cell[668, 25, 95, 1, 70, "Section"],
+Cell[580, 22, 85, 1, 150, "Title"],
 Cell[CellGroupData[{
-Cell[788, 30, 95, 1, 56, "Section"],
-Cell[886, 33, 16, 0, 30, "Text"]
+Cell[690, 27, 95, 1, 106, "Section"],
+Cell[788, 30, 2339, 47, 393, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3164, 82, 95, 1, 106, "Section"],
+Cell[3262, 85, 2429, 57, 424, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5728, 147, 94, 1, 106, "Section"],
+Cell[5825, 150, 5918, 158, 902, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11780, 313, 99, 1, 106, "Section"],
+Cell[11882, 316, 969, 18, 137, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12888, 339, 95, 1, 106, "Section"],
+Cell[12986, 342, 1420, 26, 359, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14443, 373, 97, 1, 106, "Section"],
+Cell[14543, 376, 6731, 282, 1180, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21311, 663, 146, 2, 106, "Section"],
+Cell[21460, 667, 1661, 43, 256, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23158, 715, 99, 1, 106, "Section"],
+Cell[23260, 718, 2537, 89, 122, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25834, 812, 101, 1, 106, "Section"],
+Cell[CellGroupData[{
+Cell[25960, 817, 280, 8, 45, "Input"],
+Cell[26243, 827, 3558, 70, 368, "Output"]
+}, Open  ]],
+Cell[29816, 900, 1775, 58, 104, "Text"],
+Cell[CellGroupData[{
+Cell[31616, 962, 253, 6, 45, "Input"],
+Cell[31872, 970, 72, 1, 44, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31993, 977, 111, 1, 106, "Section"],
+Cell[32107, 980, 1266, 30, 213, "Input"],
+Cell[CellGroupData[{
+Cell[33398, 1014, 493, 13, 104, "Input"],
+Cell[33894, 1029, 164, 2, 77, "Output"],
+Cell[34061, 1033, 357, 7, 32, "Print"]
+}, Open  ]],
+Cell[34433, 1043, 91, 1, 45, "Input"]
 }, Open  ]]
 }, Open  ]]
 }
@@ -64,4 +1130,3 @@ Cell[886, 33, 16, 0, 30, "Text"]
 *)
 
 (* End of internal cache information *)
-
