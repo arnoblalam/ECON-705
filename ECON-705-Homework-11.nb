@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   2024042,      38482]
-NotebookOptionsPosition[   2018810,      38317]
-NotebookOutlinePosition[   2019184,      38333]
-CellTagsIndexPosition[   2019141,      38330]
+NotebookDataLength[   2030123,      38701]
+NotebookOptionsPosition[   2024881,      38536]
+NotebookOutlinePosition[   2025260,      38552]
+CellTagsIndexPosition[   2025217,      38549]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -351,34 +351,252 @@ Cell["Exercise 2", "Section",
  CellChangeTimes->{{3.6565122030852733`*^9, 3.656512204818305*^9}}],
 
 Cell[TextData[{
- "Subsequence: ",
+ StyleBox["Definition",
+  FontWeight->"Bold"],
+ ": ",
  Cell[BoxData[
   FormBox[
    RowBox[{"(", 
-    SubscriptBox["y", "n"]}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
- ") is a subsequence of (",
+    SubscriptBox["y", "n"]}], TraditionalForm]]],
+ ") is a ",
+ StyleBox["subsequence",
+  FontSlant->"Italic"],
+ " of (",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["x", "n"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["x", "n"], TraditionalForm]]],
  ") ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["\[Exists]", 
     RowBox[{
-     RowBox[{"f", ":", " ", "\[DoubleStruckCapitalN]"}], " ", "\[Rule]", " ", 
-     "\[DoubleStruckCapitalN]"}]], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+     RowBox[{"strictly", " ", "increasing", " ", 
+      RowBox[{"f", ":", " ", "\[DoubleStruckCapitalN]"}]}], " ", 
+     "\[Function]", " ", "\[DoubleStruckCapitalN]"}]], TraditionalForm]]],
  Cell[BoxData[
   FormBox[
    SubscriptBox["\[ForAll]", 
     RowBox[{"n", " ", "\[Element]", " ", "\[DoubleStruckCapitalN]"}]], 
+   TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    RowBox[{"f", "(", "n", ")"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".  That is, all members of (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") is an element of (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") obtained by removing some elements of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "n"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") without changing order.\n\nA sequence ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "t"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") in S converges to x \[Element] S iff every subsequence of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "t"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") converges to x.\n\n",
+ StyleBox["Proof",
+  FontWeight->"Bold"],
+ "\n\n",
+ StyleBox["Backward",
+  FontVariations->{"Underline"->True}],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", 
+    RowBox[{"\[Epsilon]", " ", ">", " ", "0"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", 
+    RowBox[{"n", " ", "\[Element]", " ", "\[DoubleStruckCapitalN]"}]], 
    TraditionalForm]],
-  FormatType->"TraditionalForm"]
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", "(", 
+    SubscriptBox["x", "n"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", x) < \[Epsilon]. (that is (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "t"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") converges to x)\n\[Because] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["y", "t"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") is a subsequence of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "t"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") any element ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["y", "t"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") is the same as the element ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    RowBox[{"f", "(", "n", ")"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "t"], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (where f is strictly increasing)\n\[Therefore] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", 
+    RowBox[{"\[Epsilon]", " ", ">", " ", "0"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", 
+    RowBox[{"n", " ", "\[Element]", " ", "\[DoubleStruckCapitalN]"}]], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", "(", 
+    SubscriptBox["y", "n"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", x) < \[Epsilon] (i.e. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["y", "t"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") converges to x)\n\n",
+ StyleBox["Forward\n",
+  FontVariations->{"Underline"->True}],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", 
+    RowBox[{"\[Epsilon]", " ", ">", " ", "0"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", 
+    RowBox[{"n", " ", "\[Element]", " ", "\[DoubleStruckCapitalN]"}]], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", "(", 
+    SubscriptBox["y", "n"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", x) < \[Epsilon]. (that is (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "t"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") converges to x)\n\[Because] f is a strictly increasing function, there \
+must exist an inverse function g = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    RowBox[{"-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[DoubleStruckCapitalN] \[Function] \[DoubleStruckCapitalN].\n\[Therefore] \
+any element ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " in the sequence ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["x", "t"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ")  is the same as the element ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", 
+    RowBox[{"g", "(", "n", ")"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " in the subsequence ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["y", "t"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ").\n \[Therefore] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ForAll]", 
+    RowBox[{"\[Epsilon]", " ", ">", " ", "0"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Exists]", 
+    RowBox[{"n", " ", "\[Element]", " ", "\[DoubleStruckCapitalN]"}]], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", "(", 
+    SubscriptBox["x", "n"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", x) < \[Epsilon] (i.e. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["y", "t"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") converges to x)"
 }], "Text",
  CellChangeTimes->{{3.6567825249602623`*^9, 3.656782605330383*^9}, {
-  3.656782680382725*^9, 3.656782692640403*^9}}]
+  3.656782680382725*^9, 3.656782692640403*^9}, {3.6567831750870175`*^9, 
+  3.6567833087771864`*^9}, {3.6567834465005836`*^9, 3.656783455567067*^9}, {
+  3.656783489671266*^9, 3.656783794470601*^9}, {3.656783918801032*^9, 
+  3.6567843563668633`*^9}, {3.6567844179761333`*^9, 3.656784433775253*^9}, {
+  3.6567844724996014`*^9, 3.6567848988618774`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -38308,6 +38526,7 @@ NL4aGl8Dja+FxtdB4+uh8Q3Q+IZofCM0vjEa3wSNb4rGH02f1EqfAJ+xzm0=
       Ticks->{Automatic, Automatic}], {576., -116.80842387373012`}, 
      ImageScaled[{0.5, 0.5}], {360., 222.49223594996212`}]}, {}},
   ContentSelectable->True,
+  ImageSize->{772.1428571428593, Automatic},
   PlotRangePadding->{6, 5}]], "Output",
  CellChangeTimes->{
   3.6565318698028345`*^9, {3.6565319262411175`*^9, 3.656531964476153*^9}}]
@@ -38315,8 +38534,8 @@ NL4aGl8Dja+FxtdB4+uh8Q3Q+IZofCM0vjEa3wSNb4rGH02f1EqfAJ+xzm0=
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1424, 877},
-WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+WindowSize->{1680, 967},
+WindowMargins->{{Automatic, -1688}, {Automatic, -81}},
 Magnification:>1.4 Inherited,
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
 StyleDefinitions->"Default.nb"
@@ -38350,137 +38569,137 @@ Cell[5305, 197, 3791, 147, 584, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[9133, 349, 97, 1, 96, "Section"],
-Cell[9233, 352, 848, 28, 44, "Text"]
+Cell[9233, 352, 6874, 246, 499, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10118, 385, 99, 1, 96, "Section"],
-Cell[10220, 388, 8121, 316, 437, "Text"]
+Cell[16144, 603, 99, 1, 96, "Section"],
+Cell[16246, 606, 8121, 316, 404, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18378, 709, 99, 1, 96, "Section"],
-Cell[18480, 712, 1000, 33, 233, "Text"]
+Cell[24404, 927, 99, 1, 96, "Section"],
+Cell[24506, 930, 1000, 33, 233, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[19517, 750, 113, 1, 96, "Section"],
-Cell[19633, 753, 392, 10, 98, "Input"],
+Cell[25543, 968, 113, 1, 96, "Section"],
+Cell[25659, 971, 392, 10, 70, "Input"],
 Cell[CellGroupData[{
-Cell[20050, 767, 1321, 33, 324, "Input"],
-Cell[21374, 802, 394, 5, 57, "Output"],
-Cell[21771, 809, 394, 5, 57, "Output"],
-Cell[22168, 816, 394, 5, 57, "Output"],
-Cell[22565, 823, 394, 5, 57, "Output"],
-Cell[22962, 830, 395, 5, 57, "Output"],
-Cell[23360, 837, 837, 21, 57, "Output"],
-Cell[24200, 860, 835, 21, 57, "Output"],
-Cell[25038, 883, 11794, 246, 473, "Output"]
+Cell[26076, 985, 1321, 33, 232, "Input"],
+Cell[27400, 1020, 394, 5, 41, "Output"],
+Cell[27797, 1027, 394, 5, 41, "Output"],
+Cell[28194, 1034, 394, 5, 41, "Output"],
+Cell[28591, 1041, 394, 5, 41, "Output"],
+Cell[28988, 1048, 395, 5, 41, "Output"],
+Cell[29386, 1055, 837, 21, 41, "Output"],
+Cell[30226, 1078, 835, 21, 41, "Output"],
+Cell[31064, 1101, 11794, 246, 338, "Output"]
 }, Open  ]],
-Cell[36847, 1132, 117, 1, 58, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[37001, 1138, 111, 1, 134, "Section"],
-Cell[CellGroupData[{
-Cell[37137, 1143, 744, 19, 58, "Input"],
-Cell[37884, 1164, 627, 12, 43, "Message"],
-Cell[38514, 1178, 325, 8, 57, "Output"]
+Cell[42873, 1350, 117, 1, 42, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38876, 1191, 653, 16, 58, "Input"],
-Cell[39532, 1209, 604, 12, 43, "Message"],
-Cell[40139, 1223, 315, 6, 57, "Output"]
-}, Open  ]],
-Cell[40469, 1232, 208, 3, 58, "Text"],
+Cell[43027, 1356, 111, 1, 96, "Section"],
 Cell[CellGroupData[{
-Cell[40702, 1239, 707, 20, 98, "Input"],
-Cell[41412, 1261, 608, 12, 43, "Message"],
-Cell[42023, 1275, 220, 5, 57, "Output"],
-Cell[42246, 1282, 170, 3, 64, "Output"]
-}, Open  ]],
-Cell[42431, 1288, 64570, 1064, 1653, "Text"]
+Cell[43163, 1361, 744, 19, 42, "Input"],
+Cell[43910, 1382, 627, 12, 31, "Message"],
+Cell[44540, 1396, 325, 8, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[107038, 2357, 109, 1, 134, "Section"],
-Cell[107150, 2360, 1355, 52, 326, "Text"],
-Cell[CellGroupData[{
-Cell[108530, 2416, 356, 11, 58, "Input"],
-Cell[108889, 2429, 552, 11, 43, "Message"],
-Cell[109444, 2442, 161, 4, 57, "Output"]
+Cell[44902, 1409, 653, 16, 42, "Input"],
+Cell[45558, 1427, 604, 12, 31, "Message"],
+Cell[46165, 1441, 315, 6, 41, "Output"]
 }, Open  ]],
-Cell[109620, 2449, 216, 4, 58, "Text"]
+Cell[46495, 1450, 208, 3, 42, "Text"],
+Cell[CellGroupData[{
+Cell[46728, 1457, 707, 20, 70, "Input"],
+Cell[47438, 1479, 608, 12, 31, "Message"],
+Cell[48049, 1493, 220, 5, 41, "Output"],
+Cell[48272, 1500, 170, 3, 46, "Output"]
+}, Open  ]],
+Cell[48457, 1506, 64570, 1064, 1290, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[109873, 2458, 111, 1, 134, "Section"],
-Cell[109987, 2461, 207, 4, 58, "Text"],
+Cell[113064, 2575, 109, 1, 96, "Section"],
+Cell[113176, 2578, 1355, 52, 233, "Text"],
 Cell[CellGroupData[{
-Cell[110219, 2469, 1370, 37, 173, "Input"],
-Cell[111592, 2508, 254, 7, 57, "Output"],
-Cell[111849, 2517, 269, 7, 57, "Output"],
-Cell[112121, 2526, 576, 12, 43, "Message"],
-Cell[112700, 2540, 218, 5, 57, "Output"],
-Cell[112921, 2547, 578, 12, 43, "Message"],
-Cell[113502, 2561, 220, 5, 57, "Output"]
+Cell[114556, 2634, 356, 11, 42, "Input"],
+Cell[114915, 2647, 552, 11, 31, "Message"],
+Cell[115470, 2660, 161, 4, 41, "Output"]
 }, Open  ]],
-Cell[113737, 2569, 211, 4, 58, "Text"],
-Cell[CellGroupData[{
-Cell[113973, 2577, 1272, 35, 173, "Input"],
-Cell[115248, 2614, 198, 6, 57, "Output"],
-Cell[115449, 2622, 215, 6, 57, "Output"],
-Cell[115667, 2630, 523, 11, 43, "Message"],
-Cell[116193, 2643, 164, 4, 57, "Output"],
-Cell[116360, 2649, 523, 11, 43, "Message"],
-Cell[116886, 2662, 165, 4, 57, "Output"]
+Cell[115646, 2667, 216, 4, 42, "Text"]
 }, Open  ]],
-Cell[117066, 2669, 240, 4, 58, "Text"],
 Cell[CellGroupData[{
-Cell[117331, 2677, 715, 18, 98, "Input"],
-Cell[118049, 2697, 14174, 281, 438, "Output"]
+Cell[115899, 2676, 111, 1, 96, "Section"],
+Cell[116013, 2679, 207, 4, 42, "Text"],
+Cell[CellGroupData[{
+Cell[116245, 2687, 1370, 37, 124, "Input"],
+Cell[117618, 2726, 254, 7, 41, "Output"],
+Cell[117875, 2735, 269, 7, 41, "Output"],
+Cell[118147, 2744, 576, 12, 31, "Message"],
+Cell[118726, 2758, 218, 5, 41, "Output"],
+Cell[118947, 2765, 578, 12, 31, "Message"],
+Cell[119528, 2779, 220, 5, 41, "Output"]
+}, Open  ]],
+Cell[119763, 2787, 211, 4, 42, "Text"],
+Cell[CellGroupData[{
+Cell[119999, 2795, 1272, 35, 124, "Input"],
+Cell[121274, 2832, 198, 6, 41, "Output"],
+Cell[121475, 2840, 215, 6, 41, "Output"],
+Cell[121693, 2848, 523, 11, 31, "Message"],
+Cell[122219, 2861, 164, 4, 41, "Output"],
+Cell[122386, 2867, 523, 11, 31, "Message"],
+Cell[122912, 2880, 165, 4, 41, "Output"]
+}, Open  ]],
+Cell[123092, 2887, 240, 4, 42, "Text"],
+Cell[CellGroupData[{
+Cell[123357, 2895, 715, 18, 42, "Input"],
+Cell[124075, 2915, 14174, 281, 313, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[132272, 2984, 113, 1, 134, "Section"],
+Cell[138298, 3202, 113, 1, 96, "Section"],
 Cell[CellGroupData[{
-Cell[132410, 2989, 530, 12, 58, "Input"],
-Cell[132943, 3003, 3781, 73, 473, "Output"]
+Cell[138436, 3207, 530, 12, 42, "Input"],
+Cell[138969, 3221, 3781, 73, 338, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[136773, 3082, 110, 1, 134, "Section"],
+Cell[142799, 3300, 110, 1, 96, "Section"],
 Cell[CellGroupData[{
-Cell[136908, 3087, 2408, 61, 249, "Input"],
-Cell[139319, 3150, 27850, 796, 488, "Output"],
-Cell[167172, 3948, 27707, 793, 488, "Output"],
-Cell[194882, 4743, 280653, 8073, 489, "Output"],
-Cell[475538, 12818, 1526412, 25059, 468, 1506464, 24731, "CachedBoxData", \
+Cell[142934, 3305, 2408, 61, 178, "Input"],
+Cell[145345, 3368, 27850, 796, 349, "Output"],
+Cell[173198, 4166, 27707, 793, 349, "Output"],
+Cell[200908, 4961, 280653, 8073, 350, "Output"],
+Cell[481564, 13036, 1526412, 25059, 335, 1506464, 24731, "CachedBoxData", \
 "BoxData", "Output"]
 }, Open  ]],
-Cell[2001965, 37880, 172, 3, 58, "Text"],
+Cell[2007991, 38098, 172, 3, 42, "Text"],
 Cell[CellGroupData[{
-Cell[2002162, 37887, 4502, 122, 740, "Input"],
-Cell[2006667, 38011, 190, 3, 57, "Output"],
-Cell[2006860, 38016, 190, 3, 57, "Output"],
-Cell[2007053, 38021, 224, 5, 62, "Output"],
-Cell[2007280, 38028, 224, 5, 62, "Output"],
-Cell[2007507, 38035, 224, 5, 62, "Output"],
-Cell[2007734, 38042, 224, 5, 62, "Output"],
-Cell[2007961, 38049, 193, 3, 57, "Output"],
-Cell[2008157, 38054, 193, 3, 57, "Output"],
-Cell[2008353, 38059, 1178, 20, 54, "Message"],
-Cell[2009534, 38081, 1301, 46, 78, "Output"],
-Cell[2010838, 38129, 365, 9, 57, "Output"]
+Cell[2008188, 38105, 4502, 122, 529, "Input"],
+Cell[2012693, 38229, 190, 3, 41, "Output"],
+Cell[2012886, 38234, 190, 3, 41, "Output"],
+Cell[2013079, 38239, 224, 5, 45, "Output"],
+Cell[2013306, 38246, 224, 5, 45, "Output"],
+Cell[2013533, 38253, 224, 5, 45, "Output"],
+Cell[2013760, 38260, 224, 5, 45, "Output"],
+Cell[2013987, 38267, 193, 3, 41, "Output"],
+Cell[2014183, 38272, 193, 3, 41, "Output"],
+Cell[2014379, 38277, 1178, 20, 39, "Message"],
+Cell[2015560, 38299, 1301, 46, 56, "Output"],
+Cell[2016864, 38347, 365, 9, 41, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2011252, 38144, 109, 1, 134, "Section"],
+Cell[2017278, 38362, 109, 1, 96, "Section"],
 Cell[CellGroupData[{
-Cell[2011386, 38149, 429, 10, 58, "Input"],
-Cell[2011818, 38161, 862, 16, 93, "Output"]
+Cell[2017412, 38367, 429, 10, 42, "Input"],
+Cell[2017844, 38379, 862, 16, 67, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2012717, 38182, 247, 5, 58, "Input"],
-Cell[2012967, 38189, 670, 11, 93, "Output"]
+Cell[2018743, 38400, 247, 5, 42, "Input"],
+Cell[2018993, 38407, 670, 11, 67, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2013674, 38205, 551, 13, 98, "Input"],
-Cell[2014228, 38220, 4542, 92, 308, "Output"]
+Cell[2019700, 38423, 551, 13, 42, "Input"],
+Cell[2020254, 38438, 4587, 93, 376, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
